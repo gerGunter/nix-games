@@ -1,0 +1,1016 @@
+{
+  "sources_sha256": {
+    "https://discord.com/api/v10/applications/detectable": "6477bf9499faae29b9736d3e407d630aace32aa904bd436bc694a453f785aaa2",
+    "https://raw.githubusercontent.com/roscomvpn/custom-category/release/mihomo/games.yaml": "f7f54f10d7fafbe81140a2d84808dffd50e06c1c2e132488c781aa46e8d7eddf"
+  },
+  "excluded": {
+    "ambiguous_multiple_apps": 401,
+    "launcher": 20,
+    "non_windows": 79,
+    "roscomvpn": 1440,
+    "unsafe_or_generic": 464
+  },
+  "total_candidates": 8157,
+  "candidates": [
+    {
+      "process": "100 aliens cats.exe",
+      "evidence": [
+        {
+          "app_id": "1250041876967587891",
+          "app_name": "100 Aliens Cats",
+          "source_path": "100 aliens cats/100 aliens cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 asian cats.exe",
+      "evidence": [
+        {
+          "app_id": "1186140812082417695",
+          "app_name": "100 Asian Cats",
+          "source_path": "100 asian cats/100 asian cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 capitalist cats.exe",
+      "evidence": [
+        {
+          "app_id": "1199005573178478602",
+          "app_name": "100 Capitalist Cats",
+          "source_path": "100 capitalist cats/100 capitalist cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 cats new york.exe",
+      "evidence": [
+        {
+          "app_id": "1287941624000679967",
+          "app_name": "100 Cats New York",
+          "source_path": "100 cats new york/100 cats new york.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 christmas cats.exe",
+      "evidence": [
+        {
+          "app_id": "1185521730396106893",
+          "app_name": "100 Christmas Cats",
+          "source_path": "100 christmas cats/100 christmas cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 dino cats.exe",
+      "evidence": [
+        {
+          "app_id": "1212111933369491597",
+          "app_name": "100 Dino Cats",
+          "source_path": "100 dino cats/100 dino cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 funny cats.exe",
+      "evidence": [
+        {
+          "app_id": "1225158015447990372",
+          "app_name": "100 Funny Cats",
+          "source_path": "100 funny cats/100 funny cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 istanbul cats.exe",
+      "evidence": [
+        {
+          "app_id": "1242205297418833980",
+          "app_name": "100 Istanbul Cats",
+          "source_path": "100 istanbul cats/100 istanbul cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 korea cats.exe",
+      "evidence": [
+        {
+          "app_id": "1320828323168780328",
+          "app_name": "100 Korea Cats",
+          "source_path": "100 korea cats/100 korea cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 march cats.exe",
+      "evidence": [
+        {
+          "app_id": "1215675424563007568",
+          "app_name": "100 March Cats",
+          "source_path": "100 march cats/100 march cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 new year cats.exe",
+      "evidence": [
+        {
+          "app_id": "1323365051247366297",
+          "app_name": "100 New Year Cats",
+          "source_path": "100 new year cats/100 new year cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 ninja cats.exe",
+      "evidence": [
+        {
+          "app_id": "1207008417583988826",
+          "app_name": "100 Ninja Cats",
+          "source_path": "100 ninja cats/100 ninja cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 robo cats.exe",
+      "evidence": [
+        {
+          "app_id": "1212142172015693894",
+          "app_name": "100 Robo Cats",
+          "source_path": "100 robo cats/100 robo cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 romantic cats.exe",
+      "evidence": [
+        {
+          "app_id": "1342058204594438206",
+          "app_name": "100 Romantic Cats",
+          "source_path": "100 romantic cats/100 romantic cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 space cats.exe",
+      "evidence": [
+        {
+          "app_id": "1253363801898877000",
+          "app_name": "100 Space Cats",
+          "source_path": "100 space cats/100 space cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "100 waiting cats.exe",
+      "evidence": [
+        {
+          "app_id": "1300308097620901928",
+          "app_name": "100 Waiting Cats",
+          "source_path": "100 waiting cats/100 waiting cats.exe"
+        }
+      ]
+    },
+    {
+      "process": "10000000.exe",
+      "evidence": [
+        {
+          "app_id": "1124359406373584926",
+          "app_name": "10000000",
+          "source_path": "10000000/10000000.exe"
+        }
+      ]
+    },
+    {
+      "process": "1000xresist.exe",
+      "evidence": [
+        {
+          "app_id": "1313640990162026619",
+          "app_name": "1000xRESIST",
+          "source_path": "1000xresist/1000xresist.exe"
+        }
+      ]
+    },
+    {
+      "process": "100orange.exe",
+      "evidence": [
+        {
+          "app_id": "363427044333191169",
+          "app_name": "100% Orange Juice",
+          "source_path": "100orange.exe"
+        }
+      ]
+    },
+    {
+      "process": "10snx.exe",
+      "evidence": [
+        {
+          "app_id": "1124353499866615838",
+          "app_name": "10 Second Ninja X",
+          "source_path": "10 second ninja x/10snx.exe"
+        }
+      ]
+    },
+    {
+      "process": "11-11 memories retold.exe",
+      "evidence": [
+        {
+          "app_id": "1132719318799503411",
+          "app_name": "11-11: Memories Retold",
+          "source_path": "rocketman/11-11 memories retold.exe"
+        }
+      ]
+    },
+    {
+      "process": "12ibt6.exe",
+      "evidence": [
+        {
+          "app_id": "1124355296379285695",
+          "app_name": "12 is Better than 6",
+          "source_path": "12ibt6hi/12ibt6.exe"
+        }
+      ]
+    },
+    {
+      "process": "12m.exe",
+      "evidence": [
+        {
+          "app_id": "1124353214909796505",
+          "app_name": "Twelve Minutes",
+          "source_path": "twelve minutes/12m.exe"
+        }
+      ]
+    },
+    {
+      "process": "140.exe",
+      "evidence": [
+        {
+          "app_id": "1402416992022954046",
+          "app_name": "140",
+          "source_path": "140/140.exe"
+        }
+      ]
+    },
+    {
+      "process": "1914-1918 series.exe",
+      "evidence": [
+        {
+          "app_id": "1402416661880901673",
+          "app_name": "Verdun",
+          "source_path": "1914-1918 series.exe"
+        }
+      ]
+    },
+    {
+      "process": "1982.exe",
+      "evidence": [
+        {
+          "app_id": "1124358056575254688",
+          "app_name": "1982",
+          "source_path": "1982/1982.exe"
+        }
+      ]
+    },
+    {
+      "process": "198x.exe",
+      "evidence": [
+        {
+          "app_id": "1124360448389697606",
+          "app_name": "198X",
+          "source_path": "198x/198x.exe"
+        }
+      ]
+    },
+    {
+      "process": "1v1_lol.exe",
+      "evidence": [
+        {
+          "app_id": "1124354358105096312",
+          "app_name": "1v1.LOL",
+          "source_path": "1v1.lol/1v1_lol.exe"
+        }
+      ]
+    },
+    {
+      "process": "200mj.exe",
+      "evidence": [
+        {
+          "app_id": "1124358071733465180",
+          "app_name": "200% Mixed Juice!",
+          "source_path": "200 mixed juice!/200mj.exe"
+        }
+      ]
+    },
+    {
+      "process": "20sm.exe",
+      "evidence": [
+        {
+          "app_id": "1208744745648529428",
+          "app_name": "20 Small Mazes",
+          "source_path": "20 small mazes/20sm.exe"
+        }
+      ]
+    },
+    {
+      "process": "20xx.exe",
+      "evidence": [
+        {
+          "app_id": "1402416871206289448",
+          "app_name": "20XX",
+          "source_path": "20xx.exe"
+        }
+      ]
+    },
+    {
+      "process": "270.exe",
+      "evidence": [
+        {
+          "app_id": "1124356468473352282",
+          "app_name": "270 | Two Seventy US Election",
+          "source_path": "270  two seventy us election/270.exe"
+        }
+      ]
+    },
+    {
+      "process": "2fightsin2tightspaces.exe",
+      "evidence": [
+        {
+          "app_id": "1537512742502670406",
+          "app_name": "2 Fights in 2 Tight Spaces",
+          "source_path": "2fightsin2tightspaces.exe"
+        }
+      ]
+    },
+    {
+      "process": "30xx.exe",
+      "evidence": [
+        {
+          "app_id": "1124356583514718268",
+          "app_name": "30XX",
+          "source_path": "30xx/30xx.exe"
+        }
+      ]
+    },
+    {
+      "process": "35mm.exe",
+      "evidence": [
+        {
+          "app_id": "1124359585780740226",
+          "app_name": "35MM",
+          "source_path": "35mm/35mm.exe"
+        }
+      ]
+    },
+    {
+      "process": "360noscopearena.exe",
+      "evidence": [
+        {
+          "app_id": "1124357664227471472",
+          "app_name": "360 No Scope Arena",
+          "source_path": "360 no scope arena/360noscopearena.exe"
+        }
+      ]
+    },
+    {
+      "process": "3dat.exe",
+      "evidence": [
+        {
+          "app_id": "1124351824611258510",
+          "app_name": "3D Aim Trainer",
+          "source_path": "3d aim trainer/3dat.exe"
+        }
+      ]
+    },
+    {
+      "process": "3dmark.exe",
+      "evidence": [
+        {
+          "app_id": "1231001465041063958",
+          "app_name": "3DMark",
+          "source_path": "x64/3dmark.exe"
+        }
+      ]
+    },
+    {
+      "process": "4d miner.exe",
+      "evidence": [
+        {
+          "app_id": "1124355753243852960",
+          "app_name": "4D Miner",
+          "source_path": "4d miner demo/4d miner.exe"
+        }
+      ]
+    },
+    {
+      "process": "4d minesweeper 64.exe",
+      "evidence": [
+        {
+          "app_id": "1124358819619815564",
+          "app_name": "4D Minesweeper",
+          "source_path": "4d minesweeper/4d minesweeper 64.exe"
+        }
+      ]
+    },
+    {
+      "process": "50floors.exe",
+      "evidence": [
+        {
+          "app_id": "1248411125528399903",
+          "app_name": "50 Floors: The Paranormal Investigators Prologue",
+          "source_path": "50 floors the paranormal investigators prologue/50floors.exe"
+        }
+      ]
+    },
+    {
+      "process": "5dchesswithmultiversetimetravel.exe",
+      "evidence": [
+        {
+          "app_id": "1124352421007736893",
+          "app_name": "5D Chess With Multiverse Time Travel",
+          "source_path": "5dchesswithmultiversetimetravel/5dchesswithmultiversetimetravel.exe"
+        }
+      ]
+    },
+    {
+      "process": "60parsecs.exe",
+      "evidence": [
+        {
+          "app_id": "1124352759857164380",
+          "app_name": "60 Parsecs!",
+          "source_path": "60 parsecs!/60parsecs.exe"
+        }
+      ]
+    },
+    {
+      "process": "60seconds.exe",
+      "evidence": [
+        {
+          "app_id": "451336909831012383",
+          "app_name": "60 Seconds!",
+          "source_path": "60seconds.exe"
+        }
+      ]
+    },
+    {
+      "process": "60secondsreatomized.exe",
+      "evidence": [
+        {
+          "app_id": "1124351892546404432",
+          "app_name": "60 Seconds! Reatomized",
+          "source_path": "60 seconds! reatomized/60secondsreatomized.exe"
+        }
+      ]
+    },
+    {
+      "process": "64.0.exe",
+      "evidence": [
+        {
+          "app_id": "1124357281564344400",
+          "app_name": "64.0",
+          "source_path": "64.0/64.0.exe"
+        }
+      ]
+    },
+    {
+      "process": "7 billion humans.exe",
+      "evidence": [
+        {
+          "app_id": "1124354704755937371",
+          "app_name": "7 Billion Humans",
+          "source_path": "7 billion humans/7 billion humans.exe"
+        }
+      ]
+    },
+    {
+      "process": "7daystodie.exe",
+      "evidence": [
+        {
+          "app_id": "363409643973771264",
+          "app_name": "7 Days to Die",
+          "source_path": "7daystodie.exe"
+        }
+      ]
+    },
+    {
+      "process": "80 days.exe",
+      "evidence": [
+        {
+          "app_id": "1124357992884744192",
+          "app_name": "80 Days",
+          "source_path": "80 days/80 days.exe"
+        }
+      ]
+    },
+    {
+      "process": "8bb.exe",
+      "evidence": [
+        {
+          "app_id": "1124355974015242340",
+          "app_name": "8-Bit Bayonetta",
+          "source_path": "8bitb/8bb.exe"
+        }
+      ]
+    },
+    {
+      "process": "9 years of shadows.exe",
+      "evidence": [
+        {
+          "app_id": "1282566208209813535",
+          "app_name": "9 Years of Shadows",
+          "source_path": "9 years of shadows/9 years of shadows.exe"
+        }
+      ]
+    },
+    {
+      "process": "911.exe",
+      "evidence": [
+        {
+          "app_id": "481103865559908372",
+          "app_name": "911 Operator",
+          "source_path": "911 operator/911.exe"
+        }
+      ]
+    },
+    {
+      "process": "98xx.exe",
+      "evidence": [
+        {
+          "app_id": "1467006967280308430",
+          "app_name": "98xx",
+          "source_path": "98xx/98xx.exe"
+        }
+      ]
+    },
+    {
+      "process": "9kings.exe",
+      "evidence": [
+        {
+          "app_id": "1375820768616648795",
+          "app_name": "9 Kings",
+          "source_path": "9 kings/9kings.exe"
+        }
+      ]
+    },
+    {
+      "process": "9th dawn remake.exe",
+      "evidence": [
+        {
+          "app_id": "1292124374736044032",
+          "app_name": "9th Dawn Remake",
+          "source_path": "9th dawn remake/9th dawn remake.exe"
+        }
+      ]
+    },
+    {
+      "process": "a bird story.exe",
+      "evidence": [
+        {
+          "app_id": "1124356448319701046",
+          "app_name": "A Bird Story",
+          "source_path": "a bird story/a bird story.exe"
+        }
+      ]
+    },
+    {
+      "process": "a dance of fire and ice.exe",
+      "evidence": [
+        {
+          "app_id": "1129504116796837939",
+          "app_name": "A Dance of Fire and Ice",
+          "source_path": "a dance of fire and ice/a dance of fire and ice.exe"
+        }
+      ]
+    },
+    {
+      "process": "a difficult game about climbing.exe",
+      "evidence": [
+        {
+          "app_id": "1215509318305325078",
+          "app_name": "A Difficult Game About Climbing",
+          "source_path": "a difficult game about climbing/a difficult game about climbing.exe"
+        }
+      ]
+    },
+    {
+      "process": "a few quick matches.exe",
+      "evidence": [
+        {
+          "app_id": "1402426004810502336",
+          "app_name": "A Few Quick Matches",
+          "source_path": "a few quick matches/a few quick matches.exe"
+        }
+      ]
+    },
+    {
+      "process": "a little to the left.exe",
+      "evidence": [
+        {
+          "app_id": "1124352521633280020",
+          "app_name": "A Little to the Left",
+          "source_path": "a little to the left/a little to the left.exe"
+        }
+      ]
+    },
+    {
+      "process": "a new life.exe",
+      "evidence": [
+        {
+          "app_id": "1124358559317119017",
+          "app_name": "a new life.",
+          "source_path": "a new life/a new life.exe"
+        }
+      ]
+    },
+    {
+      "process": "a raven monologue.exe",
+      "evidence": [
+        {
+          "app_id": "1124360182349181039",
+          "app_name": "A Raven Monologue",
+          "source_path": "a raven monologue/a raven monologue.exe"
+        }
+      ]
+    },
+    {
+      "process": "a space for the unbound.exe",
+      "evidence": [
+        {
+          "app_id": "1224750232244457573",
+          "app_name": "A Space for the Unbound",
+          "source_path": "a space for the unbound/a space for the unbound.exe"
+        }
+      ]
+    },
+    {
+      "process": "a story about farting.exe",
+      "evidence": [
+        {
+          "app_id": "1379323842467598397",
+          "app_name": "A Story About Farting",
+          "source_path": "a story about farting/a story about farting.exe"
+        }
+      ]
+    },
+    {
+      "process": "a taste of the past.exe",
+      "evidence": [
+        {
+          "app_id": "1124354838000582666",
+          "app_name": "A Taste of the Past",
+          "source_path": "a taste of the past/a taste of the past.exe"
+        }
+      ]
+    },
+    {
+      "process": "a17config.exe",
+      "evidence": [
+        {
+          "app_id": "1124359635596488805",
+          "app_name": "Atelier Sophie: The Alchemist of the Mysterious Book",
+          "source_path": "atelier sophie the alchemist of the mysterious book/a17config.exe"
+        }
+      ]
+    },
+    {
+      "process": "aaero.exe",
+      "evidence": [
+        {
+          "app_id": "1124358412474536146",
+          "app_name": "Aaero",
+          "source_path": "aaero/aaero.exe"
+        }
+      ]
+    },
+    {
+      "process": "aagame.exe",
+      "evidence": [
+        {
+          "app_id": "451547323596537866",
+          "app_name": "America's Army: Proving Grounds",
+          "source_path": "aagame.exe"
+        }
+      ]
+    },
+    {
+      "process": "aalib.exe",
+      "evidence": [
+        {
+          "app_id": "1365356766346477568",
+          "app_name": "Arcana Heart 3 LOVEMAX SIXSTARS!!!!!! XTEND",
+          "source_path": "arcanaheart3lmss/aalib.exe"
+        }
+      ]
+    },
+    {
+      "process": "aamfp.exe",
+      "evidence": [
+        {
+          "app_id": "1402418228516360192",
+          "app_name": "Amnesia: A Machine for Pigs",
+          "source_path": "machine for pigs/aamfp.exe"
+        }
+      ]
+    },
+    {
+      "process": "abalyte.exe",
+      "evidence": [
+        {
+          "app_id": "1124358964163915848",
+          "app_name": "Abalyte",
+          "source_path": "abalyte/abalyte.exe"
+        }
+      ]
+    },
+    {
+      "process": "abandonship.exe",
+      "evidence": [
+        {
+          "app_id": "1124357744644866109",
+          "app_name": "Abandon Ship",
+          "source_path": "abandon ship/abandonship.exe"
+        }
+      ]
+    },
+    {
+      "process": "abbeycore_win32_steam.exe",
+      "evidence": [
+        {
+          "app_id": "1124356817267474534",
+          "app_name": "Renowned Explorers: International Society",
+          "source_path": "win64/abbeycore_win32_steam.exe"
+        }
+      ]
+    },
+    {
+      "process": "abewin.exe",
+      "evidence": [
+        {
+          "app_id": "363428220617621504",
+          "app_name": "Oddworld: Abe's Oddysee",
+          "source_path": "oddworld abes oddysee/abewin.exe"
+        }
+      ]
+    },
+    {
+      "process": "abi-dos.exe",
+      "evidence": [
+        {
+          "app_id": "1361083598870020267",
+          "app_name": "ABI-DOS",
+          "source_path": "abi-dos/abi-dos.exe"
+        }
+      ]
+    },
+    {
+      "process": "absconding zatwor.exe",
+      "evidence": [
+        {
+          "app_id": "1292924686191296555",
+          "app_name": "Absconding Zatwor",
+          "source_path": "absconding zatwor/absconding zatwor.exe"
+        }
+      ]
+    },
+    {
+      "process": "absolum.exe",
+      "evidence": [
+        {
+          "app_id": "1426177539537375343",
+          "app_name": "Absolum",
+          "source_path": "x64.steam/absolum.exe"
+        }
+      ]
+    },
+    {
+      "process": "absolutedrift.exe",
+      "evidence": [
+        {
+          "app_id": "1124354685646680186",
+          "app_name": "Absolute Drift",
+          "source_path": "absolute drift/absolutedrift.exe"
+        }
+      ]
+    },
+    {
+      "process": "abyss the forgotten past.exe",
+      "evidence": [
+        {
+          "app_id": "1124360146852794429",
+          "app_name": "Abyss the Forgotten Past",
+          "source_path": "abyss the forgotten past prologue/abyss the forgotten past.exe"
+        }
+      ]
+    },
+    {
+      "process": "abyss.exe",
+      "evidence": [
+        {
+          "app_id": "1369537316162506822",
+          "app_name": "Abyss",
+          "source_path": "abyssonline/abyss.exe"
+        }
+      ]
+    },
+    {
+      "process": "ac3lhd_32.exe",
+      "evidence": [
+        {
+          "app_id": "425457838731690003",
+          "app_name": "Assassin's Creed III: Liberation",
+          "source_path": "ac3lhd_32.exe"
+        }
+      ]
+    },
+    {
+      "process": "ac3mp.exe",
+      "evidence": [
+        {
+          "app_id": "1402416669384511498",
+          "app_name": "Assassin's Creed III",
+          "source_path": "ac3mp.exe"
+        }
+      ]
+    },
+    {
+      "process": "ac3sp.exe",
+      "evidence": [
+        {
+          "app_id": "1402416669384511498",
+          "app_name": "Assassin's Creed III",
+          "source_path": "ac3sp.exe"
+        }
+      ]
+    },
+    {
+      "process": "ac4bfmp.exe",
+      "evidence": [
+        {
+          "app_id": "406637677199360030",
+          "app_name": "Assassin's Creed IV Black Flag",
+          "source_path": "ac4bfmp.exe"
+        }
+      ]
+    },
+    {
+      "process": "ac4bfsp.exe",
+      "evidence": [
+        {
+          "app_id": "406637677199360030",
+          "app_name": "Assassin's Creed IV Black Flag",
+          "source_path": "ac4bfsp.exe"
+        }
+      ]
+    },
+    {
+      "process": "academia64.exe",
+      "evidence": [
+        {
+          "app_id": "1124354269080993873",
+          "app_name": "Academia: School Simulator",
+          "source_path": "academiaschoolsimulator/academia64.exe"
+        }
+      ]
+    },
+    {
+      "process": "acbmp.exe",
+      "evidence": [
+        {
+          "app_id": "425435232788021258",
+          "app_name": "Assassin's Creed Brotherhood",
+          "source_path": "acbmp.exe"
+        }
+      ]
+    },
+    {
+      "process": "acbsp.exe",
+      "evidence": [
+        {
+          "app_id": "425435232788021258",
+          "app_name": "Assassin's Creed Brotherhood",
+          "source_path": "acbsp.exe"
+        }
+      ]
+    },
+    {
+      "process": "acc.exe",
+      "evidence": [
+        {
+          "app_id": "425434983080001556",
+          "app_name": "Assassin's Creed Rogue",
+          "source_path": "acc.exe"
+        }
+      ]
+    },
+    {
+      "process": "accident the pilot.exe",
+      "evidence": [
+        {
+          "app_id": "1124352722687250493",
+          "app_name": "Accident: The Pilot",
+          "source_path": "accident the pilot/accident the pilot.exe"
+        }
+      ]
+    },
+    {
+      "process": "accident.exe",
+      "evidence": [
+        {
+          "app_id": "1124358134752886927",
+          "app_name": "Accident",
+          "source_path": "accident/accident.exe"
+        }
+      ]
+    },
+    {
+      "process": "acclient.exe",
+      "evidence": [
+        {
+          "app_id": "504021888805240914",
+          "app_name": "Asheron's Call",
+          "source_path": "acclient.exe"
+        }
+      ]
+    },
+    {
+      "process": "accounting.exe",
+      "evidence": [
+        {
+          "app_id": "1124354096674131978",
+          "app_name": "Accounting",
+          "source_path": "accounting/accounting.exe"
+        }
+      ]
+    },
+    {
+      "process": "accountingplus.exe",
+      "evidence": [
+        {
+          "app_id": "1124355783673524224",
+          "app_name": "Accounting+",
+          "source_path": "accountingplus/accountingplus.exe"
+        }
+      ]
+    },
+    {
+      "process": "ace combat_ah.exe",
+      "evidence": [
+        {
+          "app_id": "1124358003953512588",
+          "app_name": "Ace Combat: Assault Horizon - Enhanced Edition",
+          "source_path": "ace combat assault horizon/ace combat_ah.exe"
+        }
+      ]
+    },
+    {
+      "process": "ace7game.exe",
+      "evidence": [
+        {
+          "app_id": "1129504507429146734",
+          "app_name": "Ace Combat 7: Skies Unknown",
+          "source_path": "ace combat 7/ace7game.exe"
+        }
+      ]
+    },
+    {
+      "process": "aces and adventures.exe",
+      "evidence": [
+        {
+          "app_id": "1207974674336841799",
+          "app_name": "Aces \u0026 Adventures",
+          "source_path": "aces and adventures/aces and adventures.exe"
+        }
+      ]
+    },
+    {
+      "process": "aces.exe",
+      "evidence": [
+        {
+          "app_id": "357607478105604096",
+          "app_name": "War Thunder",
+          "source_path": "aces.exe"
+        }
+      ]
+    },
+    {
+      "process": "aceshighsteam.exe",
+      "evidence": [
+        {
+          "app_id": "1124360581810499665",
+          "app_name": "Aces High III",
+          "source_path": "aces high iii/aceshighsteam.exe"
+        }
+      ]
+    },
+    {
+      "process": "acfc.exe",
+      "evidence": [
+        {
+          "app_id": "425453860392402964",
+          "app_name": "Assassin's Creed: Freedom Cry",
+          "source_path": "acfc.exe"
+        }
+      ]
+    }
+  ]
+}
