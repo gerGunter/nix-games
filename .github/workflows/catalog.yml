@@ -1,0 +1,76 @@
+name: Propose game candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: game-candidate-proposals
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    # Never run a write-capable manual dispatch from an unreviewed branch.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: '1.26.5'
+          cache: false
+      - run: go test ./...
+      - run: go run ./cmd/catalog
+      - name: Open a review-only draft PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BASE_SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Preserve human edits: leave an existing proposal alone.
+          pending=$(gh pr list --state open --limit 100 --json headRefName --jq '[.[] | select(.headRefName | startswith("bot/game-candidates-"))] | length')
+          if [ "$pending" != 0 ]; then
+            echo 'An open candidate PR already exists; review it first.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ "$(jq '.candidates | length' review/candidates.json)" = 0 ]; then
+            echo 'No new candidates.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if git ls-files --error-unmatch review/candidates.json >/dev/null 2>&1 && git diff --quiet -- review/candidates.json; then
+            exit 0
+          fi
+          branch="bot/game-candidates-${RUN_ID}-${RUN_ATTEMPT}"
+          gh api --method POST "repos/$GH_REPO/git/refs" -f ref="refs/heads/$branch" -f sha="$BASE_SHA" >/dev/null
+          content=$(base64 -w 0 review/candidates.json)
+          old_sha=$(git rev-parse HEAD:review/candidates.json 2>/dev/null || true)
+          # The only writable content path is the review report, never nix-games.yaml.
+          jq -n --arg branch "$branch" --arg content "$content" --arg sha "$old_sha" \
+            '{branch:$branch,content:$content,message:"chore: propose game process candidates"} + (if ($sha | test("^[a-f0-9]{40}$")) then {sha:$sha} else {} end)' > "$RUNNER_TEMP/proposal.json"
+          gh api --method PUT "repos/$GH_REPO/contents/review/candidates.json" --input "$RUNNER_TEMP/proposal.json" >/dev/null
+          cat > "$RUNNER_TEMP/body.md" <<'BODY'
+          Review-only catalog proposal. **Merging this PR does not change live routing.**
+
+          See `review/candidates.json` for up to 100 candidates, Discord app IDs/paths,
+          source hashes and exclusion counts. Discord detection does not prove that
+          an application is a game or needs this route. Verify the installed process
+          and network behavior before promoting selected names in a separate PR.
+
+          Follow README.md. Add rejected names to review/rejected.json to prevent
+          repeated proposals. No auto-merge or live YAML update is performed.
+          BODY
+          gh pr create --base main --head "$branch" --draft --title 'Review new game process candidates' --body-file "$RUNNER_TEMP/body.md" >> "$GITHUB_STEP_SUMMARY"

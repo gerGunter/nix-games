@@ -1,4 +1,3 @@
-payload:
-  - PROCESS-NAME,r5apex.exe
-  - PROCESS-NAME,VALORANT-Win64-Shipping.exe
-  - PROCESS-NAME,MyGame.exe
+# Apex and Valorant are already covered by the RoscomVPN provider.
+# New entries are published only after manual review in a separate PR.
+payload: []
