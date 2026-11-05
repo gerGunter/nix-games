@@ -7,6 +7,11 @@ import (
 )
 
 func TestNames(t *testing.T) {
+	for _, s := range []string{"love.exe", "runner.exe", "project.exe", "start_game.exe", "dotnetfx40_full_x86_x64.exe", "vc_redist.x64.exe", "application-steam-x64.exe", "pythonw.exe"} {
+		if _, ok := normalize(s); ok {
+			t.Errorf("accepted shared runtime/installer %q", s)
+		}
+	}
 	for _, s := range []string{"game.exe", "launcher.exe", "javaw.exe", "svchost.exe", "cmd.exe", "game64.exe", "Discord.exe", "steam.exe", "EasyAntiCheat.exe", "abc,evil.exe", "bad\nname.exe", "*.exe", "bad$.exe", "a.exe", "test.exe"} {
 		if _, ok := normalize(s); ok {
 			t.Errorf("accepted unsafe %q", s)
@@ -37,8 +42,8 @@ func TestRules(t *testing.T) {
 func TestCollect(t *testing.T) {
 	no, yes := false, true
 	apps := []App{
-		{"1", "Game One", []Executable{{"Dir/Unique.exe", "win32", &no}, {"Dir/Unique.exe", "win32", &no}, {"cs2.exe", "win32", &no}, {"Other-Win64-Shipping.exe", "win32", &no}, {"app.exe", "darwin", &no}, {"CustomLaunch.exe", "win32", &yes}, {"shared.exe", "win32", &no}, {"known.exe", "win32", &no}, {"reject.exe", "win32", &no}}},
-		{"2", "Game Two", []Executable{{"shared.exe", "win32", &no}}},
+		{ID: "1", Name: "Game One", Executables: []Executable{{"Dir/Unique.exe", "win32", &no}, {"Dir/Unique.exe", "win32", &no}, {"cs2.exe", "win32", &no}, {"Other-Win64-Shipping.exe", "win32", &no}, {"app.exe", "darwin", &no}, {"CustomLaunch.exe", "win32", &yes}, {"shared.exe", "win32", &no}, {"known.exe", "win32", &no}, {"reject.exe", "win32", &no}}},
+		{ID: "2", Name: "Game Two", Executables: []Executable{{"shared.exe", "win32", &no}}},
 	}
 	data, _ := json.Marshal(apps)
 	base, _ := parseRules([]byte("payload:\n - PROCESS-NAME,cs2.exe\n - PROCESS-NAME-REGEX,(?i).*Win64-Shipping.*"), true)

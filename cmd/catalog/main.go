@@ -29,6 +29,7 @@ type App struct {
 	ID          string       `json:"id"`
 	Name        string       `json:"name"`
 	Executables []Executable `json:"executables"`
+	SKUs        []SKU        `json:"third_party_skus"`
 }
 type Evidence struct {
 	ID   string `json:"app_id"`
@@ -36,14 +37,17 @@ type Evidence struct {
 	Path string `json:"source_path"`
 }
 type Candidate struct {
-	Name     string     `json:"process"`
-	Evidence []Evidence `json:"evidence"`
+	Name     string      `json:"process"`
+	Evidence []Evidence  `json:"evidence"`
+	Games    []GameProof `json:"game_proof,omitempty"`
 }
 type Report struct {
-	Sources    map[string]string `json:"sources_sha256"`
-	Excluded   map[string]int    `json:"excluded"`
-	Total      int               `json:"total_candidates"`
-	Candidates []Candidate       `json:"candidates"`
+	Sources        map[string]string `json:"sources_sha256"`
+	Excluded       map[string]int    `json:"excluded"`
+	Total          int               `json:"total_candidates"`
+	Candidates     []Candidate       `json:"candidates"`
+	Unverified     []Candidate       `json:"unverified_not_for_publication"`
+	Classification map[string]int    `json:"classification"`
 }
 type Rules struct {
 	Exact map[string]bool
@@ -117,6 +121,7 @@ func (r Rules) covers(s string) bool {
 
 var safeName = regexp.MustCompile(`^[a-zA-Z0-9][a-zA-Z0-9 _().!+\-]{1,119}\.exe$`)
 var blocked = regexp.MustCompile(`(?i)(launcher|updat|unins|install|setup|crash|reporter|helper|service|anticheat|anti-cheat|battleye|webview|browser|bootstrap)`)
+var sharedRuntime = regexp.MustCompile(`(?i)^(love|nw|nwjs|renpy|pythonw[0-9.]*|dotnet|rubyw?|perl|runner|runtime|engine|project|program|starter|start_game|application([-_].*)?|rpg_rt)\.exe$|(?i)(dotnetfx|vcredist|vc_redist|redistributable|prereq)`)
 var generic = regexp.MustCompile(`(?i)^(game|mygame|client|server|main|app|application|start|launch|run|test|demo|shipping|win32|win64|x64|x86|ue4game|ue5game|unity|java|javaw|python[0-9.]*|node|electron|cmd|powershell|pwsh|wscript|cscript|rundll32|regsvr32|svchost|explorer|taskhostw|dllhost|conhost|msiexec|winlogon|lsass|services|smss|csrss|system|chrome|firefox|msedge|opera|discord|obs64|obs32|vlc|steam|origin|upc|notepad|calc)([-_ ]?(32|64|x64|x86))?\.exe$`)
 
 func normalize(s string) (string, bool) {
@@ -125,7 +130,7 @@ func normalize(s string) (string, bool) {
 	}
 	s = path.Base(strings.ReplaceAll(s, "\\", "/"))
 	s = strings.ToLower(s)
-	return s, safeName.MatchString(s) && !blocked.MatchString(s) && !generic.MatchString(s)
+	return s, safeName.MatchString(s) && !blocked.MatchString(s) && !generic.MatchString(s) && !sharedRuntime.MatchString(s)
 }
 func collect(data []byte, base, current Rules, rejected map[string]bool) ([]Candidate, map[string]int, error) {
 	var apps []App
@@ -238,7 +243,13 @@ func run() error {
 	discord := flag.String("discord-file", "", "offline Discord snapshot")
 	roscom := flag.String("roscom-file", "", "offline RoscomVPN snapshot")
 	approve := flag.String("approve", "", "comma-separated manually verified candidates; writes local YAML only")
+	approveGames := flag.Bool("approve-games", false, "explicitly stage ALL classified games in local YAML for a manual publication PR")
+	steamFile := flag.String("steam-file", "", "offline Steam classification snapshot")
+	saveSteam := flag.String("save-steam", "", "save Steam classification snapshot for reproducible review")
 	flag.Parse()
+	if *approveGames && *approve != "" {
+		return fmt.Errorf("choose -approve or -approve-games")
+	}
 	d, err := readSource(*discord, discordURL)
 	if err != nil {
 		return err
@@ -278,6 +289,20 @@ func run() error {
 	if err != nil {
 		return err
 	}
+	candidates, unknown, classified, steamHash, err := classify(d, candidates, *steamFile, *saveSteam)
+	if err != nil {
+		return err
+	}
+	if *approveGames {
+		if len(candidates) == 0 {
+			return fmt.Errorf("no classified games to approve")
+		}
+		names := []string{}
+		for _, c := range candidates {
+			names = append(names, c.Name)
+		}
+		*approve = strings.Join(names, ",")
+	}
 	if *approve != "" {
 		allowed := map[string]bool{}
 		for _, c := range candidates {
@@ -302,10 +327,7 @@ func run() error {
 		return os.WriteFile("nix-games.yaml", []byte(out), 0644)
 	}
 	total := len(candidates)
-	if total > 100 {
-		candidates = candidates[:100]
-	}
-	report := Report{map[string]string{discordURL: fmt.Sprintf("%x", sha256.Sum256(d)), roscomURL: fmt.Sprintf("%x", sha256.Sum256(b))}, counts, total, candidates}
+	report := Report{Sources: map[string]string{discordURL: fmt.Sprintf("%x", sha256.Sum256(d)), roscomURL: fmt.Sprintf("%x", sha256.Sum256(b)), steamURL: steamHash}, Excluded: counts, Total: total, Candidates: candidates, Unverified: unknown, Classification: classified}
 	out, err := json.MarshalIndent(report, "", "  ")
 	if err != nil {
 		return err

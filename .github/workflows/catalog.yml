@@ -56,19 +56,19 @@ jobs:
           fi
           branch="bot/game-candidates-${RUN_ID}-${RUN_ATTEMPT}"
           gh api --method POST "repos/$GH_REPO/git/refs" -f ref="refs/heads/$branch" -f sha="$BASE_SHA" >/dev/null
-          content=$(base64 -w 0 review/candidates.json)
           old_sha=$(git rev-parse HEAD:review/candidates.json 2>/dev/null || true)
           # The only writable content path is the review report, never nix-games.yaml.
-          jq -n --arg branch "$branch" --arg content "$content" --arg sha "$old_sha" \
-            '{branch:$branch,content:$content,message:"chore: propose game process candidates"} + (if ($sha | test("^[a-f0-9]{40}$")) then {sha:$sha} else {} end)' > "$RUNNER_TEMP/proposal.json"
+          # Read the full catalog from a file, never from a large argv value.
+          jq -n --arg branch "$branch" --rawfile content review/candidates.json --arg sha "$old_sha" \
+            '{branch:$branch,content:($content | @base64),message:"chore: propose classified game processes"} + (if ($sha | test("^[a-f0-9]{40}$")) then {sha:$sha} else {} end)' > "$RUNNER_TEMP/proposal.json"
           gh api --method PUT "repos/$GH_REPO/contents/review/candidates.json" --input "$RUNNER_TEMP/proposal.json" >/dev/null
           cat > "$RUNNER_TEMP/body.md" <<'BODY'
           Review-only catalog proposal. **Merging this PR does not change live routing.**
 
-          See `review/candidates.json` for up to 100 candidates, Discord app IDs/paths,
-          source hashes and exclusion counts. Discord detection does not prove that
-          an application is a game or needs this route. Verify the installed process
-          and network behavior before promoting selected names in a separate PR.
+          See `review/candidates.json` for ALL eligible game processes, Discord paths,
+          Steam game-type evidence, source hashes and exclusion counts. Software and
+          tools are excluded; unverified entries are separate and cannot be promoted.
+          Review the full set before using `-approve-games` in a publication PR.
 
           Follow README.md. Add rejected names to review/rejected.json to prevent
           repeated proposals. No auto-merge or live YAML update is performed.
