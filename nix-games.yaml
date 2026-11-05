@@ -1,0 +1,4 @@
+payload:
+  - PROCESS-NAME,r5apex.exe
+  - PROCESS-NAME,VALORANT-Win64-Shipping.exe
+  - PROCESS-NAME,MyGame.exe
