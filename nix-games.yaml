@@ -1380,6 +1380,7 @@ payload:
   - PROCESS-NAME,darkfall_roa.exe
   - PROCESS-NAME,darknessii.exe
   - PROCESS-NAME,darkriddle.exe
+  - PROCESS-NAME,darktide.exe
   - PROCESS-NAME,darksburg.exe
   - PROCESS-NAME,darksiders1.exe
   - PROCESS-NAME,darksiders2.exe
