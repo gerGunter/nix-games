@@ -38,7 +38,8 @@ func TestGameClassification(t *testing.T) {
 		{ID: "xapp", Name: "Store app", SKUs: []SKU{{"xbox", "9WZDNCRFJ3TJ"}}},
 	}
 	data, _ := json.Marshal(apps)
-	found := collected{names: map[string]*Candidate{}, paths: map[string]*Candidate{}}
+	col := newCollector(Rules{}, Rules{Exact: map[string]bool{}, Paths: map[string]bool{}}, nil)
+	found := col.out
 	for _, a := range apps {
 		addEvidence(found.names, a.ID+".exe", "", Evidence{ID: a.ID, App: a.Name})
 	}
@@ -56,7 +57,7 @@ func TestGameClassification(t *testing.T) {
 	os.WriteFile(filepath.Join(dir, "xbox.json"), []byte(`{"Products":[{"ProductId":"9NT3WC6RKBVQ","ProductKind":"Game","LocalizedProperties":[{"ProductTitle":"G"}]},{"ProductId":"9WZDNCRFJ3TJ","ProductKind":"Application","LocalizedProperties":[{"ProductTitle":"A"}]}]}`), 0600)
 	var parsed []App
 	json.Unmarshal(data, &parsed)
-	res, err := classify(parsed, found, sourceOptions{steamFile: filepath.Join(dir, "steam.json"), xboxFile: filepath.Join(dir, "xbox.json")})
+	res, err := classify(parsed, col, sourceOptions{steamFile: filepath.Join(dir, "steam.json"), xboxFile: filepath.Join(dir, "xbox.json"), noPics: true})
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -87,7 +87,8 @@ func TestCollect(t *testing.T) {
 	data, _ := json.Marshal(apps)
 	base, _ := parseRules([]byte("payload:\n - PROCESS-NAME,cs2.exe\n - PROCESS-NAME-REGEX,(?i).*Win64-Shipping.*"), "PROCESS-NAME", "PROCESS-NAME-REGEX")
 	current := Rules{Exact: map[string]bool{"known.exe": true}, Paths: map[string]bool{}}
-	got, _, counts, err := collect(data, base, current, map[string]bool{"reject.exe": true})
+	col, _, err := collect(data, base, current, map[string]bool{"reject.exe": true})
+	got, counts := col.out, col.counts
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -103,7 +104,7 @@ func TestCollect(t *testing.T) {
 }
 func TestFailClosed(t *testing.T) {
 	for _, s := range []string{`[]`, `{}`, `[{"id":"1","name":"X","executables":[{"os":"windows","name":"valid.exe","is_launcher":false}]}]`, `[{"id":"1","name":"X","executables":[{"os":"win32","name":"valid.exe"}]}]`} {
-		if _, _, _, err := collect([]byte(s), Rules{}, Rules{}, nil); err == nil {
+		if _, _, err := collect([]byte(s), Rules{}, Rules{}, nil); err == nil {
 			t.Errorf("accepted schema drift: %s", s)
 		}
 	}

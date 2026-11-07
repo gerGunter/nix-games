@@ -25,6 +25,7 @@ appvnice.exe
 appvshnotify.exe
 arch.exe
 arp.exe
+asm.exe
 assignedaccessguard.exe
 at.exe
 atbroker.exe
@@ -82,6 +83,7 @@ cat.exe
 certenrollctrl.exe
 certreq.exe
 certutil.exe
+cgo.exe
 change.exe
 changepk.exe
 charmap.exe
@@ -129,6 +131,7 @@ comm.exe
 comp.exe
 compact.exe
 compattelrunner.exe
+compile.exe
 compmgmtlauncher.exe
 comppkgsrv.exe
 computerdefaults.exe
@@ -139,11 +142,13 @@ control.exe
 convert.exe
 convertvhd.exe
 coredpussvr.exe
+cover.exe
 cp.exe
 create-shortcut.exe
 credentialenrollmentmanager.exe
 credentialuibroker.exe
 credwiz.exe
+csc.exe
 cscript.exe
 csplit.exe
 csrss.exe
@@ -213,6 +218,7 @@ dnscacheugc.exe
 docker.exe
 dos2unix.exe
 doskey.exe
+dotnet.exe
 dpapimig.exe
 dpiscaling.exe
 dplaysvr.exe
@@ -275,6 +281,7 @@ filehistory.exe
 find.exe
 findstr.exe
 finger.exe
+fix.exe
 fixmapi.exe
 fltmc.exe
 fmt.exe
@@ -338,6 +345,7 @@ gpgv.exe
 gpresult.exe
 gpscript.exe
 gpupdate.exe
+gradle.exe
 grep.exe
 groups.exe
 grpconv.exe
@@ -377,6 +385,8 @@ iscsicpl.exe
 ism.exe
 isoburn.exe
 isolationproxy.exe
+java.exe
+javac.exe
 join.exe
 kbxutil.exe
 kill.exe
@@ -491,6 +501,7 @@ mtstocom.exe
 muiunattend.exe
 multidigimon.exe
 mv.exe
+mvn.exe
 nano.exe
 narrator.exe
 nbtstat.exe
@@ -577,6 +588,8 @@ pinentry-w32.exe
 pinentry.exe
 ping.exe
 pinky.exe
+pip.exe
+pip3.exe
 pkcs1-conv.exe
 pkgmgr.exe
 pktmon.exe
@@ -588,7 +601,9 @@ pnpunattend.exe
 pnputil.exe
 poqexec.exe
 powercfg.exe
+powershell_ise.exe
 pr.exe
+preprofile.exe
 presentationhost.exe
 presentationsettings.exe
 prevhost.exe
@@ -614,6 +629,8 @@ psr.exe
 ptx.exe
 pwd.exe
 pwlauncher.exe
+py.exe
+pyw.exe
 qappsrv.exe
 qprocess.exe
 query.exe
@@ -883,6 +900,7 @@ usoclient.exe
 utcdecoderhost.exe
 utilitysessionminlogon.exe
 utilman.exe
+uv.exe
 vaultcmd.exe
 vdir.exe
 vds.exe
@@ -890,6 +908,7 @@ vdsldr.exe
 verclsid.exe
 verifier.exe
 verifiergui.exe
+vet.exe
 vfpctrl.exe
 view.exe
 vim.exe

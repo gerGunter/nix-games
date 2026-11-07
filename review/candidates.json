@@ -1,17 +1,26 @@
 {
   "sources_sha256": {
-    "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/": "cbd97924847be5fa23d2d3e4a8123c98a87a11e213e1767949d75ae074de91ea",
+    "https://api.steamcmd.net/v1/info/": "4ec4986132515b8a0a613b4859f772b96a05a845e62f5c8dda94236cdfda07e7",
+    "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/": "5dab7d710fce5322160a9472ca3c47151c2811e4229a3390d620a69ca56efcd9",
     "https://discord.com/api/v10/applications/detectable": "8ab179d477e62cadf51464d18fa3a64c031da5ecc5bb2777aa943d3482803c08",
-    "https://displaycatalog.mp.microsoft.com/v7.0/products": "7b522a76344a7a4fc29fa136e1f7ff3c3470cf11c6b625a919bd7d50f7ff5a2c",
+    "https://displaycatalog.mp.microsoft.com/v7.0/products": "a54e55f973faf8df9f3e0480ea7919d817d43fd287bf26063472ed9359f96ae8",
     "https://raw.githubusercontent.com/roscomvpn/custom-category/release/mihomo/games.yaml": "f7f54f10d7fafbe81140a2d84808dffd50e06c1c2e132488c781aa46e8d7eddf"
   },
   "excluded": {
-    "already_local": 8654,
-    "already_local_path": 396,
+    "already_local": 8680,
+    "already_local_path": 394,
     "launcher": 20,
     "non_windows": 80,
+    "pics_already_local": 7523,
+    "pics_already_local_path": 229,
+    "pics_executables": 8207,
+    "pics_no_game_launch_data": 1610,
+    "pics_roscomvpn": 122,
+    "pics_unsafe_or_generic": 327,
     "roscomvpn": 1451,
-    "unsafe_or_generic": 184
+    "shared_already_local_path": 6,
+    "shared_by_many_apps": 1,
+    "unsafe_or_generic": 212
   },
   "total_candidates": 0,
   "candidates": null,
@@ -98,16 +107,6 @@
       ]
     },
     {
-      "process": "alicia.exe",
-      "evidence": [
-        {
-          "app_id": "1170070899567906877",
-          "app_name": "Alicia",
-          "source_path": "alicia/alicia.exe"
-        }
-      ]
-    },
-    {
       "process": "amnesiathebunker_demo_steam.exe",
       "evidence": [
         {
@@ -164,31 +163,6 @@
           "app_id": "1386405446918869173",
           "app_name": "ソフィーのアトリエ ～不思議な本の錬金術士～ DX",
           "source_path": "atelier sophie dx/atelier_sophie_dx.exe"
-        }
-      ]
-    },
-    {
-      "process": "atelier_yumia.exe",
-      "evidence": [
-        {
-          "app_id": "1351495378851332167",
-          "app_name": "ユミアのアトリエ ～追憶の錬金術士と幻創の地～ 体験版",
-          "source_path": "atelier yumia demo/atelier_yumia.exe"
-        },
-        {
-          "app_id": "1353986824040615989",
-          "app_name": "ユミアのアトリエ ～追憶の錬金術士と幻創の地～",
-          "source_path": "atelier yumia/atelier_yumia.exe"
-        }
-      ]
-    },
-    {
-      "process": "battlefront.exe",
-      "evidence": [
-        {
-          "app_id": "788507043358834698",
-          "app_name": "Star Wars: Battlefront",
-          "source_path": "battlefront.exe"
         }
       ]
     },
@@ -329,26 +303,6 @@
           "app_id": "504769131615223838",
           "app_name": "Cabal 2",
           "source_path": "cabal2main.exe"
-        }
-      ]
-    },
-    {
-      "process": "cars_mater.exe",
-      "evidence": [
-        {
-          "app_id": "1367410331386773554",
-          "app_name": "Cars Mater-National",
-          "source_path": "cars mater-national/cars_mater.exe"
-        }
-      ]
-    },
-    {
-      "process": "chess2.exe",
-      "evidence": [
-        {
-          "app_id": "1537507075721011371",
-          "app_name": "Chess 2",
-          "source_path": "chess2.exe"
         }
       ]
     },
@@ -578,26 +532,6 @@
       ]
     },
     {
-      "process": "defendersquest.exe",
-      "evidence": [
-        {
-          "app_id": "1124359514460803233",
-          "app_name": "Defender's Quest: Valley of the Forgotten",
-          "source_path": "deluxe/defendersquest.exe"
-        }
-      ]
-    },
-    {
-      "process": "deiland.exe",
-      "evidence": [
-        {
-          "app_id": "1124353446590562495",
-          "app_name": "Deiland",
-          "source_path": "deiland/deiland.exe"
-        }
-      ]
-    },
-    {
       "process": "descent.exe",
       "evidence": [
         {
@@ -773,16 +707,6 @@
       ]
     },
     {
-      "process": "dolphin.exe",
-      "evidence": [
-        {
-          "app_id": "356943187589201930",
-          "app_name": "Dolphin",
-          "source_path": "dolphin.exe"
-        }
-      ]
-    },
-    {
       "process": "domina.exe",
       "evidence": [
         {
@@ -823,26 +747,6 @@
       ]
     },
     {
-      "process": "easttradetycoon.exe",
-      "evidence": [
-        {
-          "app_id": "1352446678543630357",
-          "app_name": "中華一商：傳承",
-          "source_path": "east trade tycoon inheritance/easttradetycoon.exe"
-        }
-      ]
-    },
-    {
-      "process": "emojicc.exe",
-      "evidence": [
-        {
-          "app_id": "1369491566028128377",
-          "app_name": "Emoji Clicker Collector",
-          "source_path": "emojicc/emojicc.exe"
-        }
-      ]
-    },
-    {
       "process": "endlesszone.exe",
       "evidence": [
         {
@@ -879,36 +783,6 @@
           "app_id": "451546783668109322",
           "app_name": "EverQuest",
           "source_path": "eqgame.exe"
-        }
-      ]
-    },
-    {
-      "process": "etrian odyssey 3.exe",
-      "evidence": [
-        {
-          "app_id": "1365915414789488680",
-          "app_name": "世界樹の迷宮Ⅲ 星海の来訪者 HD REMASTER",
-          "source_path": "eo3hd/etrian odyssey 3.exe"
-        }
-      ]
-    },
-    {
-      "process": "etrian odyssey.exe",
-      "evidence": [
-        {
-          "app_id": "1302527716389552128",
-          "app_name": "世界樹の迷宮 HD REMASTER",
-          "source_path": "eohd/etrian odyssey.exe"
-        }
-      ]
-    },
-    {
-      "process": "eyes.exe",
-      "evidence": [
-        {
-          "app_id": "1389727348688945192",
-          "app_name": "Eyes: The Horror Game",
-          "source_path": "eyes - the horror game/eyes.exe"
         }
       ]
     },
@@ -1044,16 +918,6 @@
           "app_id": "1124352153214009444",
           "app_name": "FNaF World",
           "source_path": "fnaf world/fnaf_world.exe"
-        }
-      ]
-    },
-    {
-      "process": "football.exe",
-      "evidence": [
-        {
-          "app_id": "1172702246589448233",
-          "app_name": "STG Football",
-          "source_path": "stg football/football.exe"
         }
       ]
     },
@@ -1603,16 +1467,6 @@
       ]
     },
     {
-      "process": "kaiontale.exe",
-      "evidence": [
-        {
-          "app_id": "1124358573875539989",
-          "app_name": "Kaion Tale MMORPG",
-          "source_path": "kaion tale mmorpg/kaiontale.exe"
-        }
-      ]
-    },
-    {
       "process": "kara no shojo 2.exe",
       "evidence": [
         {
@@ -1653,26 +1507,6 @@
       ]
     },
     {
-      "process": "legoninjago_dx11.exe",
-      "evidence": [
-        {
-          "app_id": "1402416786548461589",
-          "app_name": "fin-dev",
-          "source_path": "legoninjago_dx11.exe"
-        }
-      ]
-    },
-    {
-      "process": "letsplayoinkgames.exe",
-      "evidence": [
-        {
-          "app_id": "1368603150977728643",
-          "app_name": "レッツプレイ！オインクゲームズ",
-          "source_path": "letsplayoinkgames/letsplayoinkgames.exe"
-        }
-      ]
-    },
-    {
       "process": "lineage.exe",
       "evidence": [
         {
@@ -1689,36 +1523,6 @@
           "app_id": "457300834393391104",
           "app_name": "Lineage II",
           "source_path": "lineageii.exe"
-        }
-      ]
-    },
-    {
-      "process": "littlenightmaresiii.exe",
-      "evidence": [
-        {
-          "app_id": "1419050618542362705",
-          "app_name": "Little Nightmares III - Демо-версия",
-          "source_path": "win64/littlenightmaresiii.exe"
-        }
-      ]
-    },
-    {
-      "process": "lizards_must_die_2.exe",
-      "evidence": [
-        {
-          "app_id": "1367546189209276446",
-          "app_name": "РУСЫ ПРОТИВ ЯЩЕРОВ 2",
-          "source_path": "lizards must die 2/lizards_must_die_2.exe"
-        }
-      ]
-    },
-    {
-      "process": "lok.exe",
-      "evidence": [
-        {
-          "app_id": "1124358468195860490",
-          "app_name": "The Legend of Korra",
-          "source_path": "the legend of korra/lok.exe"
         }
       ]
     },
@@ -1743,32 +1547,12 @@
       ]
     },
     {
-      "process": "lor.exe",
-      "evidence": [
-        {
-          "app_id": "1402418693958275202",
-          "app_name": "Legends of Runeterra",
-          "source_path": "riot games/lor/live/game/lor.exe"
-        }
-      ]
-    },
-    {
       "process": "lro.exe",
       "evidence": [
         {
           "app_id": "496847615456051220",
           "app_name": "Limit Ragnarok Online",
           "source_path": "lro.exe"
-        }
-      ]
-    },
-    {
-      "process": "lspdfr configurator.exe",
-      "evidence": [
-        {
-          "app_id": "1402418714716143646",
-          "app_name": "Grand Theft Auto V Legacy",
-          "source_path": "lspdfr/lspdfr configurator.exe"
         }
       ]
     },
@@ -2168,36 +1952,6 @@
       ]
     },
     {
-      "process": "nshm.exe",
-      "evidence": [
-        {
-          "app_id": "1436052593511235655",
-          "app_name": "逆水寒",
-          "source_path": "game/nshm.exe"
-        }
-      ]
-    },
-    {
-      "process": "nsuns3.exe",
-      "evidence": [
-        {
-          "app_id": "498948228146921472",
-          "app_name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 3 Full Burst",
-          "source_path": "nsuns3.exe"
-        }
-      ]
-    },
-    {
-      "process": "onigirishopsimulator.exe",
-      "evidence": [
-        {
-          "app_id": "1420409519288094831",
-          "app_name": "おにぎり屋さんシミュレーター",
-          "source_path": "onigiri shop simulator/onigirishopsimulator.exe"
-        }
-      ]
-    },
-    {
       "process": "openitg-pc.exe",
       "evidence": [
         {
@@ -2224,46 +1978,6 @@
           "app_id": "1133142004612739102",
           "app_name": "ORX Demo",
           "source_path": "orx demo/orx.exe"
-        }
-      ]
-    },
-    {
-      "process": "outbound.exe",
-      "evidence": [
-        {
-          "app_id": "1475870033845424222",
-          "app_name": "Outbound Demo / 아웃바운드 데모",
-          "source_path": "outbound demo/outbound.exe"
-        }
-      ]
-    },
-    {
-      "process": "outward.exe",
-      "evidence": [
-        {
-          "app_id": "1161772249582411826",
-          "app_name": "Outward",
-          "source_path": "outward/outward.exe"
-        }
-      ]
-    },
-    {
-      "process": "oxxl1game.exe",
-      "evidence": [
-        {
-          "app_id": "1361551670236024902",
-          "app_name": "Asterix \u0026 Obelix XXL",
-          "source_path": "asterix \u0026 obelix xxl 1/oxxl1game.exe"
-        }
-      ]
-    },
-    {
-      "process": "p3p.exe",
-      "evidence": [
-        {
-          "app_id": "1124355659274670201",
-          "app_name": "Persona 3 Portable",
-          "source_path": "p3p/p3p.exe"
         }
       ]
     },
@@ -2683,41 +2397,6 @@
       ]
     },
     {
-      "process": "sekiro.exe",
-      "evidence": [
-        {
-          "app_id": "1402416796874834143",
-          "app_name": "Sekiro: Shadows Die Twice",
-          "source_path": "sekiro.exe"
-        },
-        {
-          "app_id": "1402416796874834143",
-          "app_name": "Sekiro: Shadows Die Twice",
-          "source_path": "sekiro/sekiro.exe"
-        }
-      ]
-    },
-    {
-      "process": "senrenbanka.exe",
-      "evidence": [
-        {
-          "app_id": "1370067773572648970",
-          "app_name": "千恋＊万花",
-          "source_path": "senrenbanka/senrenbanka.exe"
-        }
-      ]
-    },
-    {
-      "process": "sephiria.exe",
-      "evidence": [
-        {
-          "app_id": "1360177588034736249",
-          "app_name": "세피리아",
-          "source_path": "sephiria/sephiria.exe"
-        }
-      ]
-    },
-    {
       "process": "sf2.exe",
       "evidence": [
         {
@@ -2743,16 +2422,6 @@
       ]
     },
     {
-      "process": "shadowofmordor.exe",
-      "evidence": [
-        {
-          "app_id": "363424997080956928",
-          "app_name": "Middle-earth: Shadow of Mordor",
-          "source_path": "shadowofmordor.exe"
-        }
-      ]
-    },
-    {
       "process": "shatteredskies.exe",
       "evidence": [
         {
@@ -2773,16 +2442,6 @@
       ]
     },
     {
-      "process": "shovelknight.exe",
-      "evidence": [
-        {
-          "app_id": "425441726736629760",
-          "app_name": "Shovel Knight",
-          "source_path": "shovelknight.exe"
-        }
-      ]
-    },
-    {
       "process": "simcity.exe",
       "evidence": [
         {
@@ -2799,16 +2458,6 @@
           "app_id": "505504523012276234",
           "app_name": "The Simpsons: Hit \u0026 Run",
           "source_path": "simpsons.exe"
-        }
-      ]
-    },
-    {
-      "process": "sims2ep9.exe",
-      "evidence": [
-        {
-          "app_id": "470283475660963850",
-          "app_name": "The Sims 2: Ultimate Collection",
-          "source_path": "sims2ep9.exe"
         }
       ]
     },
@@ -2893,16 +2542,6 @@
       ]
     },
     {
-      "process": "staffercase.exe",
-      "evidence": [
-        {
-          "app_id": "1418944857287823520",
-          "app_name": "Staffer Case: A Supernatural Mystery Adventure",
-          "source_path": "staffercase/staffercase.exe"
-        }
-      ]
-    },
-    {
       "process": "starcitizen.exe",
       "evidence": [
         {
@@ -2929,16 +2568,6 @@
           "app_id": "1124356436852494491",
           "app_name": "SteamWorld Build Demo",
           "source_path": "steamworld build demo/steamworld build demo.exe"
-        }
-      ]
-    },
-    {
-      "process": "stellar settlers.exe",
-      "evidence": [
-        {
-          "app_id": "1388609989760913468",
-          "app_name": "Stellar Settlers",
-          "source_path": "stellar settlers/stellar settlers.exe"
         }
       ]
     },
@@ -2983,32 +2612,12 @@
       ]
     },
     {
-      "process": "sultan's game.exe",
-      "evidence": [
-        {
-          "app_id": "1370792563359092958",
-          "app_name": "苏丹的游戏",
-          "source_path": "sultan's game/sultan's game.exe"
-        }
-      ]
-    },
-    {
       "process": "super auto battlemon.exe",
       "evidence": [
         {
           "app_id": "1138532477493837975",
           "app_name": "Super Auto Battlemon Demo",
           "source_path": "sab/super auto battlemon.exe"
-        }
-      ]
-    },
-    {
-      "process": "super robot wars y.exe",
-      "evidence": [
-        {
-          "app_id": "1412059543382396980",
-          "app_name": "スーパーロボット大戦Y",
-          "source_path": "srwy/super robot wars y.exe"
         }
       ]
     },
@@ -3139,16 +2748,6 @@
           "app_id": "504071879993196544",
           "app_name": "Tetris",
           "source_path": "tetris.exe"
-        }
-      ]
-    },
-    {
-      "process": "tgaac.exe",
-      "evidence": [
-        {
-          "app_id": "1343190681090523156",
-          "app_name": "大逆転裁判1＆2　-成歩堂龍ノ介の冒險と覺悟-",
-          "source_path": "tgaac/tgaac.exe"
         }
       ]
     },
@@ -3373,16 +2972,6 @@
       ]
     },
     {
-      "process": "th20.exe",
-      "evidence": [
-        {
-          "app_id": "1410353259712872660",
-          "app_name": "東方錦上京 〜 Fossilized Wonders.",
-          "source_path": "th20/th20.exe"
-        }
-      ]
-    },
-    {
       "process": "the black masses demo.exe",
       "evidence": [
         {
@@ -3593,16 +3182,6 @@
       ]
     },
     {
-      "process": "victoria.exe",
-      "evidence": [
-        {
-          "app_id": "492161312730775553",
-          "app_name": "Victoria I",
-          "source_path": "victoria.exe"
-        }
-      ]
-    },
-    {
       "process": "viewfinder_demo.exe",
       "evidence": [
         {
@@ -3673,32 +3252,12 @@
       ]
     },
     {
-      "process": "wasd.exe",
-      "evidence": [
-        {
-          "app_id": "1414973700087877852",
-          "app_name": "WASD : 토리의 모험",
-          "source_path": "wasd/wasd.exe"
-        }
-      ]
-    },
-    {
       "process": "wc3.exe",
       "evidence": [
         {
           "app_id": "424719708785344525",
           "app_name": "Warcraft III: Reign of Chaos",
           "source_path": "wc3.exe"
-        }
-      ]
-    },
-    {
-      "process": "whalegame.exe",
-      "evidence": [
-        {
-          "app_id": "1200470225720705074",
-          "app_name": "クジラゲームオンライン",
-          "source_path": "whalegame/whalegame.exe"
         }
       ]
     },
@@ -3798,42 +3357,12 @@
       ]
     },
     {
-      "process": "xzyplay.exe",
-      "evidence": [
-        {
-          "app_id": "1411138433837170742",
-          "app_name": "星の翼",
-          "source_path": "starwings/xzyplay.exe"
-        }
-      ]
-    },
-    {
       "process": "ygopro_vs.exe",
       "evidence": [
         {
           "app_id": "505520955649556490",
           "app_name": "YGOPro",
           "source_path": "ygopro_vs.exe"
-        }
-      ]
-    },
-    {
-      "process": "yomawari2.exe",
-      "evidence": [
-        {
-          "app_id": "1432066341531025568",
-          "app_name": "深夜廻",
-          "source_path": "yomawari midnight shadows/yomawari2.exe"
-        }
-      ]
-    },
-    {
-      "process": "zootycoon.exe",
-      "evidence": [
-        {
-          "app_id": "1124353424067153980",
-          "app_name": "Zoo Tycoon",
-          "source_path": "zoo tycoon/zootycoon.exe"
         }
       ]
     },
@@ -3890,17 +3419,6 @@
       ]
     },
     {
-      "process": "claire's quest/game.exe",
-      "path_regex": "(?i)(^|[\\\\/])claire's quest[\\\\/]game\\.exe$",
-      "evidence": [
-        {
-          "app_id": "1344353374811848785",
-          "app_name": "Claire's Quest",
-          "source_path": "claire's quest/game.exe"
-        }
-      ]
-    },
-    {
       "process": "combat arms/engine.exe",
       "path_regex": "(?i)(^|[\\\\/])combat arms[\\\\/]engine\\.exe$",
       "evidence": [
@@ -3908,17 +3426,6 @@
           "app_id": "496553014220554270",
           "app_name": "Combat Arms",
           "source_path": "combat arms/engine.exe"
-        }
-      ]
-    },
-    {
-      "process": "cultures 8th wonder/game.exe",
-      "path_regex": "(?i)(^|[\\\\/])cultures 8th wonder[\\\\/]game\\.exe$",
-      "evidence": [
-        {
-          "app_id": "1354379395610972231",
-          "app_name": "Cultures: 8th Wonder of the World",
-          "source_path": "cultures 8th wonder/game.exe"
         }
       ]
     },
@@ -4134,10 +3641,10 @@
   ],
   "classification": {
     "games": 0,
-    "non_game_or_conflicting_type": 52,
+    "non_game_or_conflicting_type": 51,
     "path_games": 0,
     "path_non_game_or_conflicting_type": 2,
-    "path_unverified": 24,
-    "unverified": 375
+    "path_unverified": 22,
+    "unverified": 328
   }
 }

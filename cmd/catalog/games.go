@@ -191,14 +191,17 @@ type appClass struct {
 	game    bool
 	nonGame bool
 	proofs  []GameProof
+	// steamGames: linked Steam IDs verified as type 0 (base game), used for PICS.
+	steamGames []int
 }
 type sourceOptions struct {
-	steamFile, saveSteam, xboxFile, saveXbox string
+	steamFile, saveSteam, xboxFile, saveXbox, picsFile, savePics string
+	noPics                                                       bool
 }
 type classified struct {
-	names, paths, unknown []Candidate
-	counts                map[string]int
-	steamHash, xboxHash   string
+	names, paths, unknown         []Candidate
+	counts                        map[string]int
+	steamHash, xboxHash, picsHash string
 }
 
 func snapshotHash(v any, save string) (string, error) {
@@ -278,6 +281,9 @@ func classifyApps(apps []App, needed map[string]bool, opt sourceOptions) (map[st
 				c.proofs = append(c.proofs, GameProof{"steam", strconv.Itoa(sid), item.Name, kind, "https://store.steampowered.com/app/" + strconv.Itoa(sid) + "/"})
 			} else if kind, ok := steamGameTypes[*item.Type]; ok {
 				c.game = true
+				if *item.Type == 0 {
+					c.steamGames = append(c.steamGames, sid)
+				}
 				c.proofs = append(c.proofs, GameProof{"steam", strconv.Itoa(sid), item.Name, kind, "https://store.steampowered.com/app/" + strconv.Itoa(sid) + "/"})
 			}
 		}
@@ -385,23 +391,35 @@ func decide(list map[string]*Candidate, classes map[string]*appClass, counts map
 	}
 	return games, unknown
 }
-func classify(apps []App, found collected, opt sourceOptions) (classified, error) {
+func classify(apps []App, col *collector, opt sourceOptions) (classified, error) {
 	needed := map[string]bool{}
-	for _, m := range []map[string]*Candidate{found.names, found.paths} {
+	for _, m := range []map[string]*Candidate{col.out.names, col.out.paths} {
 		for _, c := range m {
 			for _, e := range c.Evidence {
 				needed[e.ID] = true
 			}
 		}
 	}
+	targets := map[string]bool{}
+	if !opt.noPics {
+		targets = picsTargets(apps)
+	}
+	for id := range targets {
+		needed[id] = true
+	}
 	classes, steamHash, xboxHash, err := classifyApps(apps, needed, opt)
 	if err != nil {
 		return classified{}, err
 	}
+	picsHash, err := addPics(apps, targets, classes, col, opt)
+	if err != nil {
+		return classified{}, err
+	}
+	col.demoteShared()
 	counts := map[string]int{}
-	names, unknown := decide(found.names, classes, counts, "")
-	paths, unknownPaths := decide(found.paths, classes, counts, "path_")
+	names, unknown := decide(col.out.names, classes, counts, "")
+	paths, unknownPaths := decide(col.out.paths, classes, counts, "path_")
 	counts["games"] = len(names)
 	counts["path_games"] = len(paths)
-	return classified{names, paths, append(unknown, unknownPaths...), counts, steamHash, xboxHash}, nil
+	return classified{names, paths, append(unknown, unknownPaths...), counts, steamHash, xboxHash, picsHash}, nil
 }
