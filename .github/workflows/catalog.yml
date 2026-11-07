@@ -47,7 +47,7 @@ jobs:
             echo 'An open candidate PR already exists; review it first.' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          if [ "$(jq '.candidates | length' review/candidates.json)" = 0 ]; then
+          if [ "$(jq '(.candidates | length) + (.path_candidates | length)' review/candidates.json)" = 0 ]; then
             echo 'No new candidates.' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
@@ -65,8 +65,8 @@ jobs:
           cat > "$RUNNER_TEMP/body.md" <<'BODY'
           Review-only catalog proposal. **Merging this PR does not change live routing.**
 
-          See `review/candidates.json` for ALL eligible game processes, Discord paths,
-          Steam game-type evidence, source hashes and exclusion counts. Software and
+          See `review/candidates.json` for ALL eligible game processes and path rules,
+          Discord paths, Steam / Microsoft Store evidence, source hashes and exclusion counts. Software and
           tools are excluded; unverified entries are separate and cannot be promoted.
           Review the full set before using `-approve-games` in a publication PR.
 

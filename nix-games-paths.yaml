@@ -1,0 +1,397 @@
+payload:
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])1bitheart[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])8bit fiesta steam[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])8bitarmies[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])8bithordes[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])8bitinvaders[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])9bitarmies[\\/]clientg64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])airscape[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])alicemare[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])alien isolation[\\/]ai\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])always sometimes monsters[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ancient planet[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])angvik[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ann[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])another brick in the mall[\\/]launch\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])antichamber[\\/]binaries[\\/]win32[\\/]udk\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])aquarium[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])arcticeggs[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])artist idle[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])at home alone final[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])at home alone[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])aviary attorney[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])balancity[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])banished[\\/]application-steam-x64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bastard bonds[\\/]bb\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])battle chasers nightwar[\\/]bc\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])battlestar galactica deadlock[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])beyond_divinity[\\/]configtool\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bin64release[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bina1[\\/]testapp\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])birthdays the beginning[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bit\.trip runner[\\/]runner\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])black souls[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blackhole[\\/]bh\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blade strangers[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blake stone - planet strike[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blast zone! tournament[\\/]bz\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blaze rush[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blitzkrieg[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])blockade3d[\\/]main\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bloodstained curse of the moon 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bloody walls[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])book of hours[\\/]bh\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])bro falls ultimate showdown[\\/]run\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cards and castles 2[\\/]c2\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])caribbean crashers[\\/]cc\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])carmageddon1[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])carrier deck[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])castlevania advance collection[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])castlevania anniversary collection[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])castlevania dominus collection[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cat in the box[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])caveblazers[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])changed[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])chineseparent[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])classroom aquatic demo[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])closers[\\/]cw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cncremastered[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cockroach_simulator[\\/]cs\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])codename gordon[\\/]cg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game 3[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game 4[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game 5[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game the little city[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])coloring game[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])combat arms reloaded[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])command & conquer red alert ii[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])command & conquer tiberian sun[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])commander keen[\\/]base1[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])common[\\/]master levels of doom[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])common[\\/]one unit whole blood[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])common[\\/]tomb raider \(i\)[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])common[\\/]xcom ufo defense[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])conan unconquered[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])confessmylove[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])contra anniversary collection[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cooking craze[\\/]cc\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cossacks ii battle for europe[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cossacks ii napoleonic wars[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])costume quest[\\/]cq\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])creativedestruction[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])crying suns demo[\\/]cs\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])crying suns[\\/]cs\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])crypto miner tycoon simulator starter edition[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])cultures northland[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])danganronpa another episode ultra despair girls[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dangerous waters[\\/]steamrun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dark elf[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dark forces[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dark messiah might and magic multi-player[\\/]mm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dark messiah might and magic single player[\\/]mm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])date banger[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dawn of war soulstorm[\\/]4gb_patch\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])db xenoverse 2[\\/]start\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])death rally[\\/]dr\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])death stranding[\\/]ds\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])deathsmiles[\\/]default\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ded[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])deep the game[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])disillusion[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])disney's princess enchanted journey[\\/]play\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])distant worlds universe[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])divinity2_dev_cut[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dodonpachi resurrection[\\/]default\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])doom 2[\\/]base[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dragon ball gekishin squadra[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dragon ball the breakers[\\/]start_game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dragon cliff[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dragon marked for death[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dragonia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])drinkbox_game4[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dungeon keeper[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dungeon warfare[\\/]dw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dynasty warriors 8 - empires[\\/]launch\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])dynasty warriors 8[\\/]launch\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])empires apart[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])en_trick & treat[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])eternal senia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])everafter falls[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])everquest f2p[\\/]launchpad\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])exe64[\\/]wb\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])exposed livestream[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fallen ~makina and the city of ruins~[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fallout 3 goty[\\/]4gb_patch\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fap queen[\\/]fq\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])farming simulator 2011[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fate extella[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fausts alptraum[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fear & hunger 2 termina[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fear & hunger[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])felvidek[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fetish locator s&m studio[\\/]sm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])field of glory ii[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])final doom[\\/]base[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])final[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fingered[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])firework[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fishidle 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])fleet command[\\/]steamrun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])flesh water[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])flowstate[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2017[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2019 demo[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2019 touch[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2019[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2020 touch[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2020[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2021 demo[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2021 touch[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2021[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2022 demo[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2022[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2023 demo[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2023[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 2024[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager 26[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football manager touch 2018[\\/]fm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])football tactics[\\/]game64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])forgedbattalion[\\/]clientg\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])freedom planet[\\/]fp\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])futa fix dick dine and dash[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])gachi heroes[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])game dev tycoon[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])gamecenter[\\/]bin32release[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])geometry may\. i swear it's a nice free game[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])gloria victis[\\/]gv\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])goooool[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])gotham city impostors f2p[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])grand theft auto vice city[\\/]testapp\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])grim clicker[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])grimm's hollow[\\/]rpg_rt\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hack_me[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hakoniwa explorer plus[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])halcyon 6 lightspeed edition[\\/]h6\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])half_life_caged[\\/]hl\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])halospartanstrike[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])harvester[\\/]dosbox_windows[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hc3[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])he needs his medicine[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hell girls[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hello charlotte ep1[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hello charlotte[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hentai beach[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hentai shooter 3d[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])heretic shadow of the serpent riders[\\/]base[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])heroes of annihilated empires[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hexen[\\/]base[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])high profits[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])high school simulator[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])homesick[\\/]binaries[\\/]win32[\\/]udk\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])homesick[\\/]binaries[\\/]win64[\\/]udk\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])horizon[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])how to lose ones virginity[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])hylics[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])idle bouncer[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])idol hands[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])idol manager[\\/]im\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])idol party[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ikaruga[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])impossible creatures[\\/]ic\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])in stars and time[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])installers[\\/]pbsvc\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])introvert a teenager simulator[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ironwolf free non-vr edition[\\/]iw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ironwolf[\\/]iw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])jesus christ rpg[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])jupiter hell[\\/]jh\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])karryn's prison[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])kill knight[\\/]build\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])killing time[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])king exit[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])king's bounty - the legend[\\/]kb\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])kings bounty armored princess[\\/]kb\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])kings bounty crossworlds[\\/]kb\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])kota's new journey[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])kuboom[\\/]build\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])latex dungeon mv[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])leaf blower revolution[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])league of pixels[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])legend of edda pegasus[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])lewd gym[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])life of a pizza[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])lily's well[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])living with sister monochrome fantasy[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])look outside[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])lunacid - tears of the moon[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])lust epidemic[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mabinogi[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mad father[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])madness cubed[\\/]build\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])madout2_bigcityonline[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mafia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mages of mystralia[\\/]build\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mark_of_the_ninja[\\/]bin[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])master of orion 2[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])material girl[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mega man 11[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mega_man_x_dive_offline[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])meltys quest[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mirror[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])misao[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])misha's incident[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])missing translation[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mniy[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])modern pink elf rpg[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mojo 2 mia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mojo hanako[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mojo xxx[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])monmusu[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])monster hunter stories 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])montaro[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])motorsport manager[\\/]mm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])move or die[\\/]love[\\/]win[\\/]love\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])mushihimesama[\\/]default\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])myst masterpiece[\\/]scummvm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])nalogi[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])nancy drew curse of blackmoor manor[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])nancy drew last train to blue moon canyon[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])nancy drew the secret of shadow ranch[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])naruto shippuden ultimate ninja storm 4[\\/]x360ce\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])naruto shippuden ultimate ninja storm 4[\\/]x360ce_x64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])naval action[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])need for speed hot pursuit[\\/]configtool\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])neighbours from hell[\\/]bin[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])neverwinter[\\/]live[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])nexon[\\/]library[\\/]mabinogi[\\/]appdata[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])night of the dead[\\/]lf\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])no more heroes[\\/]configurationtool\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])one way heroics[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])onimusha[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])onmyoji[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])order of battle  pacific[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])otaku's adventure[\\/]play\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])outcast - a new beginning[\\/]o2\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])p5s[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])panzer corps[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])party jousting[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])pixel dungeon[\\/]pd\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])planets under attack[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])pocket mirror - goldenertraum[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])postal iii[\\/]p3\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])princess & conquest[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])project highrise[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])project warlock[\\/]pw_x64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])rakuen[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ratatan[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])realm revolutions[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])riff racer[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])robin hood[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])rocketbirds_hardboiled[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])roworld[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])rpg mo[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])runes of magic[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])saihateeki[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])screeps[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])scummvm[\\/]scummvm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sea dogs to each his own[\\/]engine\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sex room[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])shadow warrior original[\\/]bin[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sherlock holmes versus jack the ripper[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])shiningresonancerefrain[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ship simulator extremes[\\/]splash\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sid meier's colonization[\\/]dosbox_windows[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])silent dream[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])snowbreak[\\/]game[\\/]binaries[\\/]win64[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])snowbreak[\\/]game[\\/]game[\\/]binaries[\\/]win64[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])soccer manager 2025[\\/]sm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sonic generations demo[\\/]configurationtool\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sparrowhime[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])star conflict[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])star trek online[\\/]live[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])star trek online[\\/]live[\\/]x64[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])star trek online[\\/]live[\\/]x86[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])start again start again start again a prologue[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])stock wolf[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])sub command[\\/]steamrun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])succubus[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])summer memories[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])super lesbian animal rpg[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])super star[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])supraball[\\/]binaries[\\/]win32[\\/]udk\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])supraball[\\/]binaries[\\/]win64[\\/]udk\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])survivals battle royale[\\/]client\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])syberia 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])syberia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])system[\\/]em\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tactical craft online[\\/]tc\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tailor tales[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tales of the black forest[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])terra firma[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])territory idle[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the agnietta[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the bunny graveyard[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the case of the golden idol[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the coffin of andy and leyley[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the crooked man[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the deed dynasty[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the deed[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the elder scrolls arena[\\/]dosbox-0\.74[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the elder scrolls daggerfall[\\/]dosbox-0\.74[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the genesis order[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the heiress[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the imperial gatekeeper[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the last sovereign[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the longest journey[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the red solstice[\\/]bin[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the rise of the golden idol[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the settlers online[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the test final revelation[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the test hypothesis rising[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the test[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the testament of sherlock holmes[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the thrill of the fight[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the uncertain[\\/]splash\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])the witch's house mv[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])thegreatwar[\\/]clientg64\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tile runner[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tokyo dark[\\/]nw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])total war shogun 2[\\/]modmanager\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tower tactics liberation[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])tower wars[\\/]tw\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])toy soldiers complete[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])trailer park boys greasy money[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])transport defender[\\/]td\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])treasure hunter claire[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])treasure of nadia[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])turbo pug[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ty the tasmanian tiger[\\/]ty\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ultimate admiral age of sail[\\/]build\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ultimate doom[\\/]base[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])ultra fight da ! kyanta 2[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])uncharted legacy of thieves collection[\\/]u4\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])viking rise[\\/]vr\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])vox machinae[\\/]vm\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])war of dots[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])warface[\\/]bin32release[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])warhammer 40000 armageddon[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])warhammer 40000 gladius - relics of war[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])warhammer 40000 sanctus reach[\\/]autorun\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])warlock - master of the arcane[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])we are football[\\/]fe\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])winter memories[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])wish[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])wolfenstein 3d[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])wolfenstein enemy territory[\\/]et\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])world's dawn[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])worms[\\/]dosbox[\\/]dosbox\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])wormsworldparty[\\/]w2\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])x-mode[\\/]gameclient\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])x4 foundations[\\/]x4\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])xxx puzzle[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])yoogames_hd1[\\/]wd\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])yttd[\\/]game\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])yu escape  monday[\\/]yu\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])yumenikki[\\/]rpg_rt\.exe$
+  - PROCESS-PATH-REGEX,(?i)(^|[\\/])zghm[\\/]game\.exe$
