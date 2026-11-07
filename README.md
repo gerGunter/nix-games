@@ -32,17 +32,24 @@ Mihomo сравнивает `PROCESS-NAME` без учёта регистра (`
 3. Приложения без вердикта Steam проверяются по Xbox/Microsoft Store SKU через
    [display catalog](https://displaycatalog.mp.microsoft.com/v7.0/products):
    `ProductKind: Game` — игра, `Application` — вето (Sea of Thieves, Minecraft Bedrock…).
-4. Имя процесса решается по **всем** приложениям Discord, где оно встречается: любое
+4. У ~9 тыс. подтверждённых Steam-игр Discord не знает ни одного Windows-exe. Для них
+   берётся launch-конфигурация Steam (PICS: `installdir` + `config.launch.*.executable`
+   для Windows) через публичное зеркало [steamcmd.net](https://api.steamcmd.net/v1/info/413150).
+   Запрашиваются только базовые игры (`type 0`) таких приложений, `common.type` должен быть
+   `Game`; пути проходят те же фильтры, в отчёте у них `source: steam_pics:<appid>`.
+5. Имя процесса решается по **всем** приложениям, где оно встречается: любое
    приложение-программа запрещает имя, иначе достаточно одного подтверждённого игрового.
    Игра и её демо/издание/переиздание больше не отбрасываются как «неоднозначные».
-5. Фильтр проверяет только имя файла (запятая в папке «Warhammer 40,000» больше не
+   Имя, общее для 5 и более приложений, считается движком/обёрткой и уходит в path-правила.
+6. Фильтр проверяет только имя файла (запятая в папке «Warhammer 40,000» больше не
    ломает запись). Разрешены Unicode, `'`, `&`, `@`; запрещены `,`, `#`, `:`, кавычки.
-   Удаляются лаунчеры, обновляторы, установщики, античиты, crash-репортёры, общие утилиты
+   Удаляются лаунчеры, обновляторы, установщики, античиты, crash-репортёры, редакторы,
+   конфигураторы, выделенные серверы, артбуки/саундтреки, общие утилиты
    (`autorun`, `4gb_patch`, `x360ce`, `dosbox`, `config*`…), имена из 1–2 символов и всё из
    [`review/system-binaries.txt`](review/system-binaries.txt) — exe Windows, Git for Windows и
    dev-инструментов (`sh.exe`, `gh.exe`, `sc.exe`, `cl.exe`…). Безликие имена с уникальной
    папкой уходят в path-правила.
-6. Проверяются точные имена и regex RoscomVPN, существующие локальные списки и
+7. Проверяются точные имена и regex RoscomVPN, существующие локальные списки и
    `review/rejected.json` (имя процесса или путь Discord вида `folder/game.exe`).
 
 Старая Steam Store `appdetails` не используется для классификации: при проверке
@@ -57,10 +64,10 @@ SRPG Studio она вернула `type: game`, тогда как Store Browse �
 Отчёт включает **весь** отфильтрованный набор. Игры без карточки Steam/Xbox показаны в
 `unverified_not_for_publication` и не принимаются массовым добавлением.
 
-Главное ограничение — сам Discord: из ~25 тыс. приложений Windows-exe есть только у ~10 тыс.,
-а у ~9 тыс. подтверждённых Steam-игр путей нет совсем. Их можно добрать из launch-конфигурации
-Steam (PICS) — это отдельная доработка. 100% покрытия по именам невозможно: часть имён
-не уникальна, новые игры появляются в Discord с задержкой.
+Охват ограничен списком приложений Discord (~25 тыс.): Steam-игры, которых там нет, не
+рассматриваются. Launch-конфигурация Steam иногда указывает на лаунчер (Baldur's Gate 3),
+а не на сам процесс игры; такие имена отсеиваются фильтром, но реальный exe тогда не найден.
+100% покрытия по именам невозможно: часть имён не уникальна, новые игры появляются с задержкой.
 Наш список не очищает RoscomVPN: там уже есть лаунчеры, `javaw.exe`, широкое выражение
 `Win64-Shipping` и другие вспомогательные процессы. Поэтому группа с обоими провайдерами
 не становится строго «только игры». Более ранние правила Mihomo также имеют приоритет.
@@ -113,7 +120,7 @@ auto-merge. Крупный отчёт передаётся GitHub API через
 Для PR, созданных `GITHUB_TOKEN`, GitHub может запросить **Approve workflows to run**.
 
 Источник ограничен 64 MiB и таймаутом 60 секунд; редиректы запрещены; 429/5xx повторяются
-до 4 раз. Steam запрашивается пакетами до 100 ID, Microsoft Store — до 50, с паузами. Ошибка сети, неполный пакет, изменённая обязательная схема
+до 4 раз. Steam запрашивается пакетами до 100 ID, Microsoft Store — до 50, steamcmd.net — по одному ID в 4 потока (~7 минут). Ошибка сети, неполный пакет, изменённая обязательная схема
 или неподдержанный синтаксис RoscomVPN останавливают генерацию до записи отчёта/YAML.
 YAML-парсер поддерживает только проверенный plain-scalar формат PROCESS-NAME/REGEX;
 неизвестные правила не пропускаются молча. Данные не исполняются как код.
@@ -121,11 +128,11 @@ YAML-парсер поддерживает только проверенный p
 ```sh
 go test ./...
 go vet ./...
-# Сохранить снимки классификации Steam и Microsoft Store:
-go run ./cmd/catalog -save-steam /path/to/steam.json -save-xbox /path/to/xbox.json
-# Повторить сбор без сети на тех же источниках:
-go run ./cmd/catalog -discord-file /path/to/discord.json -roscom-file /path/to/games.yaml -steam-file /path/to/steam.json -xbox-file /path/to/xbox.json
+# Сохранить снимки классификации Steam, Microsoft Store и Steam PICS:
+go run ./cmd/catalog -save-steam /path/to/steam.json -save-xbox /path/to/xbox.json -save-pics /path/to/pics.json
+# Повторить сбор без сети на тех же источниках (-no-pics пропускает PICS):
+go run ./cmd/catalog -discord-file /path/to/discord.json -roscom-file /path/to/games.yaml -steam-file /path/to/steam.json -xbox-file /path/to/xbox.json -pics-file /path/to/pics.json
 ```
 
-Store Browse, display catalog и Discord endpoint проверены живыми запросами, но не обещают стабильный
+Store Browse, display catalog, steamcmd.net и Discord endpoint проверены живыми запросами, но не обещают стабильный
 публичный контракт. При изменении формата сначала исправляются адаптер и тесты.

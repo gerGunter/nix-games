@@ -38,6 +38,9 @@ type Evidence struct {
 	ID   string `json:"app_id"`
 	App  string `json:"app_name"`
 	Path string `json:"source_path"`
+	// Source is empty for Discord paths and "steam_pics:<appid>" for paths taken
+	// from the Steam launch configuration (installdir/executable).
+	Source string `json:"source,omitempty"`
 }
 
 // Candidate is either a PROCESS-NAME (Name is the lowercase file name) or a
@@ -144,7 +147,9 @@ func (r Rules) covers(s string) bool {
 // : (YAML mapping), quotes, shell/glob metacharacters.
 var safeName = regexp.MustCompile(`^[\p{L}\p{N}][\p{L}\p{N} _().!+\-'&@~\[\]]{1,119}\.exe$`)
 var safeSegment = regexp.MustCompile(`^[\p{L}\p{N}][\p{L}\p{N} _().!+\-'&@~\[\]]{0,119}$`)
-var blocked = regexp.MustCompile(`(?i)(launcher|updat|unins|install|setup|crashreport|crashhandler|crashpad|crashsender|crash_reporter|reporter|helper|service|anticheat|anti-cheat|battleye|webview|browser|bootstrap)`)
+var blocked = regexp.MustCompile(`(?i)(launcher|updat|unins|install|setup|crashreport|crashhandler|crashpad|crashsender|crash_reporter|reporter|helper|service|anticheat|anti-cheat|battleye|easyanticheat|start_protected_game|webview|browser|bootstrap` +
+	// Companion tools that Steam launch options and Discord list next to the game.
+	`|config|editor|devtools|dedicated|[-_ ]server\.exe$|artbook|soundtrack|benchmark|workshoputility|uploader)`)
 var sharedRuntime = regexp.MustCompile(`(?i)^(love|nw|nwjs|renpy|pythonw[0-9.]*|dotnet|rubyw?|perl|runner|runtime|engine|project|program|starter|start_game|application([-_].*)?|rpg_rt)\.exe$|(?i)(dotnetfx|vcredist|vc_redist|redistributable|prereq)`)
 var generic = regexp.MustCompile(`(?i)^(game|mygame|client|server|main|app|application|start|launch|run|test|demo|shipping|win32|win64|x64|x86|ue4game|ue5game|unity|java|javaw|python[0-9.]*|node|electron|cmd|powershell|pwsh|wscript|cscript|rundll32|regsvr32|svchost|explorer|taskhostw|dllhost|conhost|msiexec|winlogon|lsass|services|smss|csrss|system|chrome|firefox|msedge|opera|discord|obs64|obs32|vlc|steam|origin|upc|notepad|calc` +
 	// Tools and wrappers shipped with many unrelated games, and engine/emulator hosts.
@@ -242,80 +247,120 @@ func addEvidence(m map[string]*Candidate, key, regex string, e Evidence) {
 	m[key].Evidence = append(m[key].Evidence, e)
 }
 
+// collector applies the same filters to every executable path, whatever its
+// source (Discord detectable list or Steam launch configuration).
+type collector struct {
+	base, current Rules
+	rejected      map[string]bool
+	counts        map[string]int
+	out           collected
+}
+
+func newCollector(base, current Rules, rejected map[string]bool) *collector {
+	return &collector{base, current, rejected, map[string]int{}, collected{map[string]*Candidate{}, map[string]*Candidate{}}}
+}
+
+// add files one Windows executable path under a PROCESS-NAME or, for a generic
+// binary with a distinctive folder, a PROCESS-PATH-REGEX candidate.
+func (c *collector) add(rawPath string, ev Evidence, prefix string) {
+	raw := path.Base(strings.ReplaceAll(rawPath, "\\", "/"))
+	if c.base.covers(raw) || c.base.covers(baseName(rawPath)) {
+		c.counts[prefix+"roscomvpn"]++
+		return
+	}
+	name, ok := normalize(rawPath)
+	if ok {
+		switch {
+		case c.current.covers(name):
+			c.counts[prefix+"already_local"]++
+		case c.rejected[name]:
+			c.counts[prefix+"manually_rejected"]++
+		default:
+			addEvidence(c.out.names, name, "", ev)
+		}
+		return
+	}
+	c.addPath(rawPath, ev, prefix)
+}
+func (c *collector) addPath(rawPath string, ev Evidence, prefix string) {
+	name := baseName(rawPath)
+	suffix, rule, ok := "", "", false
+	if safeName.MatchString(name) && !blocked.MatchString(name) {
+		suffix, rule, ok = pathRule(rawPath)
+	}
+	switch {
+	case !ok:
+		c.counts[prefix+"unsafe_or_generic"]++
+	case c.current.Paths[rule]:
+		c.counts[prefix+"already_local_path"]++
+	case c.rejected[suffix]:
+		c.counts[prefix+"manually_rejected"]++
+	default:
+		addEvidence(c.out.paths, suffix, rule, ev)
+	}
+}
+
+// manyGames: a file name used by this many different applications is an engine
+// host or a wrapper (tdf.exe, game_x64_dev.exe), not an identity of one game.
+const manyGames = 5
+
+func (c *collector) demoteShared() {
+	for name, cand := range c.out.names {
+		owners := map[string]bool{}
+		for _, e := range cand.Evidence {
+			owners[e.ID] = true
+		}
+		if len(owners) < manyGames {
+			continue
+		}
+		delete(c.out.names, name)
+		c.counts["shared_by_many_apps"]++
+		for _, e := range cand.Evidence {
+			c.addPath(e.Path, e, "shared_")
+		}
+	}
+}
+
 // collect gathers every eligible Windows executable together with ALL Discord
 // applications that list it. Whether a name shared by several applications is
 // safe is decided later, once each application is classified.
-func collect(data []byte, base, current Rules, rejected map[string]bool) (collected, []App, map[string]int, error) {
+func collect(data []byte, base, current Rules, rejected map[string]bool) (*collector, []App, error) {
 	var apps []App
-	out := collected{map[string]*Candidate{}, map[string]*Candidate{}}
 	if err := json.Unmarshal(data, &apps); err != nil {
-		return out, nil, nil, err
+		return nil, nil, err
 	}
 	if len(apps) == 0 {
-		return out, nil, nil, fmt.Errorf("empty Discord catalog")
+		return nil, nil, fmt.Errorf("empty Discord catalog")
 	}
-	counts := map[string]int{}
+	c := newCollector(base, current, rejected)
 	windows := 0
 	for _, app := range apps {
 		if app.ID == "" || app.Name == "" {
-			return out, nil, nil, fmt.Errorf("missing application identity")
+			return nil, nil, fmt.Errorf("missing application identity")
 		}
 		for _, exe := range app.Executables {
 			if exe.OS == "" || exe.Name == "" {
-				return out, nil, nil, fmt.Errorf("invalid executable schema")
+				return nil, nil, fmt.Errorf("invalid executable schema")
 			}
 			if exe.OS != "win32" {
-				counts["non_windows"]++
+				c.counts["non_windows"]++
 				continue
 			}
 			windows++
 			if exe.Launcher == nil {
-				return out, nil, nil, fmt.Errorf("missing is_launcher")
+				return nil, nil, fmt.Errorf("missing is_launcher")
 			}
 			if *exe.Launcher {
-				counts["launcher"]++
+				c.counts["launcher"]++
 				continue
 			}
-			ev := Evidence{app.ID, app.Name, exe.Name}
-			raw := path.Base(strings.ReplaceAll(exe.Name, "\\", "/"))
-			if base.covers(raw) || base.covers(baseName(exe.Name)) {
-				counts["roscomvpn"]++
-				continue
-			}
-			name, ok := normalize(exe.Name)
-			if ok {
-				switch {
-				case current.covers(name):
-					counts["already_local"]++
-				case rejected[name]:
-					counts["manually_rejected"]++
-				default:
-					addEvidence(out.names, name, "", ev)
-				}
-				continue
-			}
-			suffix, rule, pok := "", "", false
-			if safeName.MatchString(name) && !blocked.MatchString(name) {
-				suffix, rule, pok = pathRule(exe.Name)
-			}
-			if !pok {
-				counts["unsafe_or_generic"]++
-				continue
-			}
-			switch {
-			case current.Paths[rule]:
-				counts["already_local_path"]++
-			case rejected[suffix]:
-				counts["manually_rejected"]++
-			default:
-				addEvidence(out.paths, suffix, rule, ev)
-			}
+			c.add(exe.Name, Evidence{app.ID, app.Name, exe.Name, ""}, "")
 		}
 	}
 	if windows == 0 {
-		return out, nil, nil, fmt.Errorf("no Windows executables; schema may have changed")
+		return nil, nil, fmt.Errorf("no Windows executables; schema may have changed")
 	}
-	return out, apps, counts, nil
+	return c, apps, nil
 }
 func readSource(file, url string) ([]byte, error) {
 	if file != "" {
@@ -390,6 +435,9 @@ func run() error {
 	saveSteam := flag.String("save-steam", "", "save Steam classification snapshot for reproducible review")
 	xboxFile := flag.String("xbox-file", "", "offline Microsoft Store classification snapshot")
 	saveXbox := flag.String("save-xbox", "", "save Microsoft Store classification snapshot for reproducible review")
+	picsFile := flag.String("pics-file", "", "offline Steam PICS launch snapshot")
+	savePics := flag.String("save-pics", "", "save Steam PICS launch snapshot for reproducible review")
+	noPics := flag.Bool("no-pics", false, "skip Steam PICS launch executables")
 	flag.Parse()
 	if *approveGames && *approve != "" {
 		return fmt.Errorf("choose -approve or -approve-games")
@@ -433,18 +481,16 @@ func run() error {
 	for _, s := range rejects {
 		rejected[strings.ToLower(s)] = true
 	}
-	found, apps, counts, err := collect(d, base, current, rejected)
+	col, apps, err := collect(d, base, current, rejected)
 	if err != nil {
 		return err
 	}
-	res, err := classify(apps, found, sourceOptions{*steamFile, *saveSteam, *xboxFile, *saveXbox})
+	res, err := classify(apps, col, sourceOptions{*steamFile, *saveSteam, *xboxFile, *saveXbox, *picsFile, *savePics, *noPics})
 	if err != nil {
 		return err
 	}
 	if *approveGames {
-		if len(res.names)+len(res.paths) == 0 {
-			return fmt.Errorf("no classified games to approve")
-		}
+		// With nothing new this still rewrites the YAML to prune unsafe entries.
 		list := []string{}
 		for _, c := range res.names {
 			list = append(list, c.Name)
@@ -454,7 +500,7 @@ func run() error {
 		}
 		*approve = strings.Join(list, ",")
 	}
-	if *approve != "" {
+	if *approve != "" || *approveGames {
 		names := map[string]bool{}
 		paths := map[string]string{}
 		for _, c := range res.names {
@@ -466,6 +512,8 @@ func run() error {
 		for _, s := range strings.Split(*approve, ",") {
 			s = strings.ToLower(strings.TrimSpace(s))
 			switch {
+			case s == "":
+				continue
 			case names[s]:
 				current.Exact[s] = true
 			case paths[s] != "":
@@ -487,8 +535,8 @@ func run() error {
 		return writeRules(pathsFile, "PROCESS-PATH-REGEX", current.Paths)
 	}
 	report := Report{
-		Sources:        map[string]string{discordURL: fmt.Sprintf("%x", sha256.Sum256(d)), roscomURL: fmt.Sprintf("%x", sha256.Sum256(b)), steamURL: res.steamHash, xboxURL: res.xboxHash},
-		Excluded:       counts,
+		Sources:        map[string]string{discordURL: fmt.Sprintf("%x", sha256.Sum256(d)), roscomURL: fmt.Sprintf("%x", sha256.Sum256(b)), steamURL: res.steamHash, xboxURL: res.xboxHash, picsURL: res.picsHash},
+		Excluded:       col.counts,
 		Total:          len(res.names) + len(res.paths),
 		Candidates:     res.names,
 		PathCandidates: res.paths,
