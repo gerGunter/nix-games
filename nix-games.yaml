@@ -2381,8 +2381,6 @@ payload:
   - PROCESS-NAME,code-terraform.exe
   - PROCESS-NAME,codenameoceankeeper.exe
   - PROCESS-NAME,codestrike.exe
-  - PROCESS-NAME,codex mortis.exe
-  - PROCESS-NAME,codex.exe
   - PROCESS-NAME,codmp.exe
   - PROCESS-NAME,codsp.exe
   - PROCESS-NAME,coduomp.exe
