@@ -1,8 +1,8 @@
 {
   "sources_sha256": {
-    "https://api.steamcmd.net/v1/info/": "4ec4986132515b8a0a613b4859f772b96a05a845e62f5c8dda94236cdfda07e7",
-    "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/": "5dab7d710fce5322160a9472ca3c47151c2811e4229a3390d620a69ca56efcd9",
-    "https://discord.com/api/v10/applications/detectable": "8ab179d477e62cadf51464d18fa3a64c031da5ecc5bb2777aa943d3482803c08",
+    "https://api.steamcmd.net/v1/info/": "5731db8a86320faedf8367b9b4b726ec2da1b72e2df4cf42b637510785e28ee8",
+    "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/": "f026a59c84250fd9e0fd65f6a83e50ef16f211b62690bee9804f46bd38df3772",
+    "https://discord.com/api/v10/applications/detectable": "9a0aa7afb0e6e67096cf3bb1c37033afa5aa35d837df5e2598d1d43f9c2fe659",
     "https://displaycatalog.mp.microsoft.com/v7.0/products": "a54e55f973faf8df9f3e0480ea7919d817d43fd287bf26063472ed9359f96ae8",
     "https://raw.githubusercontent.com/roscomvpn/custom-category/release/mihomo/games.yaml": "f7f54f10d7fafbe81140a2d84808dffd50e06c1c2e132488c781aa46e8d7eddf"
   },
@@ -11,10 +11,10 @@
     "already_local_path": 394,
     "launcher": 20,
     "non_windows": 80,
-    "pics_already_local": 7523,
+    "pics_already_local": 7520,
     "pics_already_local_path": 229,
-    "pics_executables": 8207,
-    "pics_no_game_launch_data": 1610,
+    "pics_executables": 8228,
+    "pics_no_game_launch_data": 1608,
     "pics_roscomvpn": 122,
     "pics_unsafe_or_generic": 327,
     "roscomvpn": 1451,
@@ -22,8 +22,496 @@
     "shared_by_many_apps": 1,
     "unsafe_or_generic": 212
   },
-  "total_candidates": 0,
-  "candidates": null,
+  "total_candidates": 24,
+  "candidates": [
+    {
+      "process": "casualtiesunknown.exe",
+      "evidence": [
+        {
+          "app_id": "1469531122563289324",
+          "app_name": "Casualties: Unknown",
+          "source_path": "Casualties Unknown/CasualtiesUnknown.exe",
+          "source": "steam_pics:4576490"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4576490",
+          "name": "Casualties: Unknown",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4576490/"
+        }
+      ]
+    },
+    {
+      "process": "codex mortis.exe",
+      "evidence": [
+        {
+          "app_id": "1456486629395927243",
+          "app_name": "CODEX MORTIS",
+          "source_path": "CODEX MORTIS/Codex Mortis.exe",
+          "source": "steam_pics:4084120"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4084120",
+          "name": "CODEX MORTIS",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4084120/"
+        }
+      ]
+    },
+    {
+      "process": "codex.exe",
+      "evidence": [
+        {
+          "app_id": "1445976724625035384",
+          "app_name": "Draw Steel",
+          "source_path": "Draw Steel Codex/Codex.exe",
+          "source": "steam_pics:2902740"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "2902740",
+          "name": "Draw Steel",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/2902740/"
+        }
+      ]
+    },
+    {
+      "process": "dreadmoor.exe",
+      "evidence": [
+        {
+          "app_id": "1507218177342439485",
+          "app_name": "DREADMOOR",
+          "source_path": "DREADMOOR/Dreadmoor.exe",
+          "source": "steam_pics:3629430"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "3629430",
+          "name": "DREADMOOR",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/3629430/"
+        }
+      ]
+    },
+    {
+      "process": "dubparty.exe",
+      "evidence": [
+        {
+          "app_id": "1557966469176889354",
+          "app_name": "Dub Party",
+          "source_path": "Dub Party/DubParty.exe",
+          "source": "steam_pics:5259730"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5259730",
+          "name": "Dub Party",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5259730/"
+        }
+      ]
+    },
+    {
+      "process": "fleets of valor.exe",
+      "evidence": [
+        {
+          "app_id": "1568838050618802287",
+          "app_name": "Fleets of Valor",
+          "source_path": "Fleets of Valor/Fleets of Valor.exe",
+          "source": "steam_pics:5222940"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5222940",
+          "name": "Fleets of Valor",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5222940/"
+        }
+      ]
+    },
+    {
+      "process": "go next.exe",
+      "evidence": [
+        {
+          "app_id": "1545645091270430821",
+          "app_name": "Go Next!",
+          "source_path": "Go Next!/Go Next.exe",
+          "source": "steam_pics:5064170"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5064170",
+          "name": "Go Next!",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5064170/"
+        }
+      ]
+    },
+    {
+      "process": "hamstrprotocol.exe",
+      "evidence": [
+        {
+          "app_id": "1534773253292167169",
+          "app_name": "Hamstr Protocol",
+          "source_path": "Hamstr Protocol/HamstrProtocol.exe",
+          "source": "steam_pics:4708030"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4708030",
+          "name": "Hamstr Protocol",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4708030/"
+        }
+      ]
+    },
+    {
+      "process": "havkermanx.exe",
+      "evidence": [
+        {
+          "app_id": "1568837909597921442",
+          "app_name": "HAVKER-MAN X",
+          "source_path": "Havkerman/HAVKERMANX.exe",
+          "source": "steam_pics:3645540"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "3645540",
+          "name": "HAVKER-MAN X",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/3645540/"
+        }
+      ]
+    },
+    {
+      "process": "hellwait.exe",
+      "evidence": [
+        {
+          "app_id": "1519190892018270381",
+          "app_name": "Hell Wait",
+          "source_path": "Hell Wait/HellWait.exe",
+          "source": "steam_pics:3936340"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "3936340",
+          "name": "Hell Wait",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/3936340/"
+        }
+      ]
+    },
+    {
+      "process": "howempireswork.exe",
+      "evidence": [
+        {
+          "app_id": "1568837935439282216",
+          "app_name": "How Empires Work",
+          "source_path": "How Empires Work/HowEmpiresWork.exe",
+          "source": "steam_pics:4663730"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4663730",
+          "name": "How Empires Work: Incremental Strategy",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4663730/"
+        }
+      ]
+    },
+    {
+      "process": "insidejob.exe",
+      "evidence": [
+        {
+          "app_id": "1567751175972061266",
+          "app_name": "Inside Job",
+          "source_path": "Prison Simulator Inside Job/InsideJob.exe",
+          "source": "steam_pics:4736090"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4736090",
+          "name": "Inside Job",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4736090/"
+        },
+        {
+          "source": "steam",
+          "id": "4761990",
+          "name": "Inside Job",
+          "kind": "beta",
+          "url": "https://store.steampowered.com/app/4761990/"
+        }
+      ]
+    },
+    {
+      "process": "kessler.exe",
+      "evidence": [
+        {
+          "app_id": "1568838081342214275",
+          "app_name": "KESSLER: Orbital Incremental",
+          "source_path": "KESSLER/KESSLER.exe",
+          "source": "steam_pics:5131440"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5131440",
+          "name": "KESSLER: Orbital Incremental",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5131440/"
+        }
+      ]
+    },
+    {
+      "process": "neo junk city.exe",
+      "evidence": [
+        {
+          "app_id": "1428182853719429203",
+          "app_name": "Neo Junk City",
+          "source_path": "Neo Junk City/Neo Junk City.exe",
+          "source": "steam_pics:2378230"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "2378230",
+          "name": "Neo Junk City",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/2378230/"
+        }
+      ]
+    },
+    {
+      "process": "oboro no ichi.exe",
+      "evidence": [
+        {
+          "app_id": "1557241369838489650",
+          "app_name": "Oboro no Ichi",
+          "source_path": "Oboro no Ichi/Oboro No Ichi/Oboro No Ichi.exe",
+          "source": "steam_pics:4559930"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4559930",
+          "name": "Oboro no Ichi",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4559930/"
+        }
+      ]
+    },
+    {
+      "process": "onlyreachsky.exe",
+      "evidence": [
+        {
+          "app_id": "1428184347319734302",
+          "app_name": "Only Up 2",
+          "source_path": "One Way Up/OnlyReachSky.exe",
+          "source": "steam_pics:2653170"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "2653170",
+          "name": "One Way Up",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/2653170/"
+        }
+      ]
+    },
+    {
+      "process": "reason_and_rhyme.exe",
+      "evidence": [
+        {
+          "app_id": "1568837921082052678",
+          "app_name": "Reason \u0026 Rhyme",
+          "source_path": "ReasonAndRhyme/windows/reason_and_rhyme.exe",
+          "source": "steam_pics:4461870"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4461870",
+          "name": "Reason and Rhyme",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4461870/"
+        }
+      ]
+    },
+    {
+      "process": "romul.exe",
+      "evidence": [
+        {
+          "app_id": "1565577676448731197",
+          "app_name": "ROMUL",
+          "source_path": "ROMUL/Romul.exe",
+          "source": "steam_pics:4755250"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4755250",
+          "name": "ROMUL",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4755250/"
+        }
+      ]
+    },
+    {
+      "process": "safari-tv.exe",
+      "evidence": [
+        {
+          "app_id": "1557241395562029158",
+          "app_name": "Safari-TV",
+          "source_path": "Safari-TV/Safari-TV.exe",
+          "source": "steam_pics:5118500"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5118500",
+          "name": "Safari-TV",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5118500/"
+        }
+      ]
+    },
+    {
+      "process": "twin drive.exe",
+      "evidence": [
+        {
+          "app_id": "1568838012383666298",
+          "app_name": "Twin Drive",
+          "source_path": "Twin Drive/Twin Drive.exe",
+          "source": "steam_pics:4944320"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "4944320",
+          "name": "Twin Drive",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/4944320/"
+        }
+      ]
+    },
+    {
+      "process": "waifu curator.exe",
+      "evidence": [
+        {
+          "app_id": "1563765396404961382",
+          "app_name": "Waifu Curator",
+          "source_path": "Waifu Curator/Waifu Curator.exe",
+          "source": "steam_pics:5182720"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5182720",
+          "name": "Waifu Curator",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5182720/"
+        }
+      ]
+    },
+    {
+      "process": "want a bomb.exe",
+      "evidence": [
+        {
+          "app_id": "1568838067786219520",
+          "app_name": "Want a Bomb?",
+          "source_path": "Want a Bomb/Want a Bomb.exe",
+          "source": "steam_pics:5251070"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "5251070",
+          "name": "Want a Bomb?",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/5251070/"
+        }
+      ]
+    },
+    {
+      "process": "wendyquest.exe",
+      "evidence": [
+        {
+          "app_id": "1568838121645150288",
+          "app_name": "WendyQuest: Legend of the Four Corner Stones",
+          "source_path": "Wendy Quest/WendyQuest.exe",
+          "source": "steam_pics:3339970"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "3339970",
+          "name": "WendyQuest: Legend of the Four Corner Stones",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/3339970/"
+        }
+      ]
+    },
+    {
+      "process": "whiteclothes.exe",
+      "evidence": [
+        {
+          "app_id": "1568475515344519231",
+          "app_name": "WhiteClothes",
+          "source_path": "WhiteClothes/WhiteClothes.exe",
+          "source": "steam_pics:1495940"
+        }
+      ],
+      "game_proof": [
+        {
+          "source": "steam",
+          "id": "1495940",
+          "name": "WhiteClothes",
+          "kind": "game",
+          "url": "https://store.steampowered.com/app/1495940/"
+        }
+      ]
+    }
+  ],
   "path_candidates": null,
   "unverified_not_for_publication": [
     {
@@ -3640,7 +4128,7 @@
     }
   ],
   "classification": {
-    "games": 0,
+    "games": 24,
     "non_game_or_conflicting_type": 51,
     "path_games": 0,
     "path_non_game_or_conflicting_type": 2,
